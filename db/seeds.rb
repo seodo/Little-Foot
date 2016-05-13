@@ -22,11 +22,19 @@ Survey.create
 Category.create(title: "Food")
 Category.create(title: "Transportation")
 
-Question.create(content: "What did you have for breakfast?", category_id: 1)
-Question.create(content: "How much of that did you have for breakfast?", follow_up_id: 1, category_id: 1)
-Question.create(content: "What did you have for lunch?", category_id: 1)
-Question.create(content: "What mode of transportation did you take?", category_id: 2, follow_up_id: 4)
-Question.create(content: "How many miles?", category_id: 2)
+# Question 1
+Question.create(content: "What did you have for breakfast? Check all that apply and the serving amount.", category_id: 1)
+
+# Question 2
+Question.create(content: "What did you have for lunch? Check all that apply and the serving amount.", category_id: 1)
+
+# Question 3
+Question.create(content: "What did you have for dinner? Check all that apply and the serving amount.", category_id: 1)
+
+# Question 4
+Question.create(content: "How many times have you eaten out at a restaurant today?", category_id: 1)
+
+
  Response.create(content: 'eggs', question_id: 1, survey_id: 1)
  Response.create(content: '1 serving', question_id: 2, survey_id: 1)
 
