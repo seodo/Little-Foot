@@ -3,8 +3,8 @@
 <% #Question 1 %>
 <%=form_tag '/responses' %>
 <%=label_tag 'What did you have for breakfast? Enter serving size' %>
-<input type='hidden' name='survey_id' value='<%=@survey.id%>'>
-<input type='hidden' name='question_id' value='1'>
+<input type='hidden' name='survey_id' value='<%= @survey.id %>'>
+<input type='hidden' name='question_id' value='<%= @question.id %>'>
 
 <ul>
 <li>Eggs

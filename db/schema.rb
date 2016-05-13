@@ -38,8 +38,8 @@ ActiveRecord::Schema.define(version: 20160513210848) do
   end
 
   create_table "responses", force: :cascade do |t|
-    t.integer  "impact_item_id", null: false
-    t.decimal  "quantity"
+    t.integer  "impact_item_id"
+    t.integer  "quantity"
     t.integer  "question_id",    null: false
     t.integer  "survey_id",      null: false
     t.datetime "created_at",     null: false
