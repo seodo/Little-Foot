@@ -49,7 +49,8 @@ ActiveRecord::Schema.define(version: 20160512234706) do
     t.string   "password_digest", null: false
     t.string   "image_url"
     t.text     "bio"
-    t.string   "location"
+    t.string   "city"
+    t.string   "state"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end

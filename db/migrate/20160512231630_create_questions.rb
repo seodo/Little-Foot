@@ -4,6 +4,7 @@ class CreateQuestions < ActiveRecord::Migration
       t.string :content, null: false
       t.integer :survey_id, null: false
       t.integer :category_id, null: false
+      t.integer :follow_up_id
 
       t.timestamps null: false
     end
