@@ -35,8 +35,8 @@ Question.create(content: "What did you have for dinner? Check all that apply and
 Question.create(content: "How many times have you eaten out at a restaurant today?", category_id: 1)
 
 
- Response.create(content: 'eggs', question_id: 1, survey_id: 1)
- Response.create(content: '1 serving', question_id: 2, survey_id: 1)
+ # Response.create(content: 'eggs', question_id: 1, survey_id: 1)
+ # Response.create(content: '1 serving', question_id: 2, survey_id: 1)
 
 # ImpactItem.create(name:'beef' , carbon: 2.30)
 # ImpactItem.create(name:'lamb' , carbon: 5.52)
