@@ -1,8 +1,11 @@
 class SurveysController < ApplicationController
 
 
-  def index
-
+  def new
+    #if logged_in?
+      @survey = Survey.new()
+      @questions
+    #end
   end
 
 

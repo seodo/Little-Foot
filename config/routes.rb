@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   resources :users, except: [:index]
 
-  resources :surveys, only: [:index]
+  resources :surveys, only: [:new]
+
+  resources :responses, only: [:create]
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
