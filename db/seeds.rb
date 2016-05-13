@@ -16,17 +16,18 @@ User.create(full_name: "Patrick Swayze", email: "hello@email.com", password: "12
 User.create(full_name: "Julia Roberts", email: "hey@email.com", password: "12345678")
 User.create(full_name: "Johnny Depp", email: "hi@email.com", password: "12345678")
 
-Survey.create(user_id: 8)
+Survey.create(user_id: 1)
 Survey.create
 
 Category.create(title: "Food")
 Category.create(title: "Transportation")
 
-Question.create(content: "What did you have for breakfast?", survey_id: 1, category_id: 1)
-Question.create(content: "What did you have for lunch?", survey_id: 1, category_id: 1)
-Question.create(content: "What mode of transportation did you take?", category_id: 2,survey_id: 2)
-Question.create(content: "How many miles?", category_id: 2, survey_id: 2)
- Response.create(content: 'Yes', question_id: 1)
- Response.create(content: 'No', question_id: 2)
+Question.create(content: "What did you have for breakfast?", category_id: 1)
+Question.create(content: "How much of that did you have for breakfast?", follow_up_id: 1, category_id: 1)
+Question.create(content: "What did you have for lunch?", category_id: 1)
+Question.create(content: "What mode of transportation did you take?", category_id: 2, follow_up_id: 4)
+Question.create(content: "How many miles?", category_id: 2)
+ Response.create(content: 'eggs', question_id: 1, survey_id: 1)
+ Response.create(content: '1 serving', question_id: 2, survey_id: 1)
 
 
