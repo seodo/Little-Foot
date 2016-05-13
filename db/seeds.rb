@@ -38,4 +38,22 @@ Question.create(content: "How many times have you eaten out at a restaurant toda
  Response.create(content: 'eggs', question_id: 1, survey_id: 1)
  Response.create(content: '1 serving', question_id: 2, survey_id: 1)
 
+ImpactItem.create(name:'beef' , carbon: 2.30)
+ImpactItem.create(name:'lamb' , carbon: 5.52)
+ImpactItem.create(name:'cheese' , carbon: 0.57)
+ImpactItem.create(name:'pork' , carbon: 1.03)
+ImpactItem.create(name:'turkey' , carbon: 1.24)
+ImpactItem.create(name:'chicken' , carbon: 0.78)
+ImpactItem.create(name:'tuna' , carbon: 0.35)
+ImpactItem.create(name:'eggs' , carbon: 0.33)
+ImpactItem.create(name:'potatoes' , carbon: 0.50)
+ImpactItem.create(name:'rice' , carbon: 0.23)
+ImpactItem.create(name:'beans' , carbon: 0.22)
+ImpactItem.create(name:'milk' , carbon: 0.43)
+
+
+
+
+
+
 
