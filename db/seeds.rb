@@ -23,13 +23,13 @@ Category.create(title: "Food")
 Category.create(title: "Transportation")
 
 # Question 1
-Question.create(content: "What did you have for breakfast? Check all that apply and the serving amount.", category_id: 1)
+Question.create(content: "What did you have for breakfast? Check all that apply and the serving amount.", category_id: 1, choices: true)
 
 # Question 2
-Question.create(content: "What did you have for lunch? Check all that apply and the serving amount.", category_id: 1)
+Question.create(content: "What did you have for lunch? Check all that apply and the serving amount.", category_id: 1, choices: true)
 
 # Question 3
-Question.create(content: "What did you have for dinner? Check all that apply and the serving amount.", category_id: 1)
+Question.create(content: "What did you have for dinner? Check all that apply and the serving amount.", category_id: 1, choices: true)
 
 # Question 4
 Question.create(content: "How many times have you eaten out at a restaurant today?", category_id: 1)

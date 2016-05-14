@@ -1,14 +1,17 @@
 class ResponsesController < ApplicationController
 
 def create
-  @response = Response.new(question_id: params[:question_id].to_i, survey_id: params[:survey_id].to_i)
-@responses = []
-  params.each do |k,v|
-    if ImpactItem.find_by(name: k) && v.to_i > 0
-      impact_item = ImpactItem.find_by(name: k)
-     @responses << Response.create(question_id: params[:question_id].to_i, survey_id: params[:survey_id].to_i, impact_item_id: impact_item.id, quantity: v.to_i)
-    end
-  end
+  @survey = Survey.find_by(id: params[:survey_id].to_i)
+  @question = Question.find_by(id: params[:question_id].to_i)
+  @responses = []
+	  params.each do |key, value|
+	    if ImpactItem.find_by(name: key) && value.to_i > 0
+	      impact_item = ImpactItem.find_by(name: key)
+	     @responses << Response.create(question_id: @question.id, survey_id: @survey.id, impact_item_id: impact_item.id, quantity: value.to_i)
+	    end
+	  end
+	  @next_question = Question.find_by(id: (@question.id + 1))
+  redirect_to survey_question_path(@survey, @next_question)
   # logic to get to the next question (2)
 end
 

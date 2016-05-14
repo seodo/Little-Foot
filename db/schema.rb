@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20160513210848) do
     t.string   "content",      null: false
     t.integer  "category_id",  null: false
     t.integer  "follow_up_id"
+    t.boolean  "choices"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
