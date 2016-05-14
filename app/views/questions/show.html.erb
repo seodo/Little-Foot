@@ -5,9 +5,11 @@
 <input type='hidden' name='survey_id' value='<%= @survey.id %>'>
 <input type='hidden' name='question_id' value='<%= @question.id %>'>
 
-<% if @question.choices %>
-  <%= render 'choices' %>
-<% else %> <li>
+<% if @question.food_choices %>
+  <%= render 'food_choices' %>
+<%end%>
+
+ <li>
 <select name="quantity">
   <option value="0">0</option>
   <option value="1">1</option>
@@ -16,4 +18,9 @@
   <option value="4">4</option>
 </select></li>
 <%= submit_tag 'Submit' %>
+
+
+
+<% if @question.transportation_choices %>
+  <%= render 'transportation_choices' %>
 <%end%>
