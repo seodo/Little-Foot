@@ -16,7 +16,7 @@ class Survey < ActiveRecord::Base
 
   def calculate_footprint_by_category(category)
     footprint = 0
-    category_responses = self.responses.select { |response| Category.find_by(id: response.question.category_id).title.downcase == category.downcase}
+    category_responses = self.responses.select { |response| Category.find_by(id: response.question.category_id).title.downcase == category.downcase }
 
     category_responses.each do |response|
        item = ImpactItem.find_by(id: response.impact_item_id)
