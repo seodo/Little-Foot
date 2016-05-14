@@ -1,0 +1,11 @@
+<h1>End of Survey Results</h1>
+<h2>Total Carbon Footprint:
+  <%= @survey.calculate_footprint%> pounds of CO2</h2>
+
+<h3>Carbon Footprint by category</h2>
+<ul>
+<li>Food</li>
+<p><%= @survey.calculate_footprint_by_category('food')%> pounds of CO2</p>
+<li>Transportation</li>
+<li>Household</li>
+</ul>
