@@ -3,5 +3,5 @@ class Response < ActiveRecord::Base
   belongs_to :survey
   has_one :impact_item
 
-  validates :content, :question_id, presence: true
+  validates :question_id, presence: true
 end
