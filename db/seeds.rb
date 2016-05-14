@@ -57,6 +57,45 @@ ImpactItem.create(name:'bus', carbon: 0.56)
 ImpactItem.create(name:'commuter_rail', carbon: 0.27)
 ImpactItem.create(name:'subway', carbon: 0.12)
 
+# in lbs:
+ImpactItem.create( name: 'laundry_wash', carbon: 1.54 )
+ImpactItem.create( name: 'laundry_dry', carbon: 3.75 )
+
+# hot shower. Carbon footprint in lbs per minute:
+ImpactItem.create( name: 'shower', carbon: 0.255 )
+
+# tv watching in kg per viewer-hour (0.088). now lbs
+ImpactItem.create( name: 'tv', carbon: 0.19 )
+
+# cup of coffee in grams. now lbs
+ImpactItem.create( name: 'coffee', carbon: 0.05 )
+
+# pint of tap water in grams. now lbs
+ImpactItem.create( name: 'tap_water', carbon: 0.000308647 )
+
+# 500ml bottle of water in grams. now lbs
+ImpactItem.create( name: 'water_bottle', carbon: 0.35 )
+
+# sending short email in grams. now lbs
+ImpactItem.create( name: 'short_email', carbon: 0.01 )
+
+# send email with attachment in grams. now lbs
+ImpactItem.create( name: 'attachment_email', carbon: 0.11 )
+
+# send a text in grams. now lbs
+ImpactItem.create( name: 'text', carbon: 0.0000308647 )
+
+# using plastic bag in grams. now lbs
+ImpactItem.create( name: 'plastic_bag', carbon: 0.02 )
+
+# using paper bag in grams. now lbs
+ImpactItem.create( name: 'paper_bag', carbon: 0.09 )
+
+# hair dryer per minute in kg: now lbs
+ImpactItem.create( name: 'hair_dryer', carbon: 0.02 )
+
+# toilet paper per sheet unrecycled in grams. now lbs
+ImpactItem.create( name: 'toilet_paper', carbon: 0.004 )
 
 
 
