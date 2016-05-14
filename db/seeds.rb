@@ -19,40 +19,41 @@ User.create(full_name: "Johnny Depp", email: "hi@email.com", password: "12345678
 Survey.create(user_id: 1)
 Survey.create
 
-# Category.create(title: "Food")
-# Category.create(title: "Transportation")
+Category.create(title: "Food")
+Category.create(title: "Transportation")
 
-# # Question 1
-# Question.create(content: "What did you have for breakfast? Check all that apply and the serving amount.", category_id: 1, choices: true)
+# Question 1
+Question.create(content: "What did you have for breakfast? Check all that apply and the serving amount.", category_id: 1, choices: true)
 
-# # Question 2
-# Question.create(content: "What did you have for lunch? Check all that apply and the serving amount.", category_id: 1, choices: true)
+# Question 2
+Question.create(content: "What did you have for lunch? Check all that apply and the serving amount.", category_id: 1, choices: true)
 
-# # Question 3
-# Question.create(content: "What did you have for dinner? Check all that apply and the serving amount.", category_id: 1, choices: true)
+# Question 3
+Question.create(content: "What did you have for dinner? Check all that apply and the serving amount.", category_id: 1, choices: true)
 
-# # Question 4
-# Question.create(content: "How many times have you eaten out at a restaurant today?", category_id: 1)
-
-
- # Response.create(content: 'eggs', question_id: 1, survey_id: 1)
- # Response.create(content: '1 serving', question_id: 2, survey_id: 1)
-
-ImpactItem.create(name:'beef' , carbon: 2.30)
-ImpactItem.create(name:'lamb' , carbon: 5.52)
-ImpactItem.create(name:'cheese' , carbon: 0.57)
-ImpactItem.create(name:'pork' , carbon: 1.03)
-ImpactItem.create(name:'turkey' , carbon: 1.24)
-ImpactItem.create(name:'chicken' , carbon: 0.78)
-ImpactItem.create(name:'tuna' , carbon: 0.35)
-ImpactItem.create(name:'eggs' , carbon: 0.33)
-ImpactItem.create(name:'potatoes' , carbon: 0.50)
-ImpactItem.create(name:'rice' , carbon: 0.23)
-ImpactItem.create(name:'beans' , carbon: 0.22)
-ImpactItem.create(name:'milk' , carbon: 0.43)
+# Question 4
+Question.create(content: "How many times have you eaten out at a restaurant today?", category_id: 1)
 
 
+ Response.create(content: 'eggs', question_id: 1, survey_id: 1)
+ Response.create(content: '1 serving', question_id: 2, survey_id: 1)
 
+ImpactItem.create(name:'beef' , carbon: 5.07)
+ImpactItem.create(name:'lamb' , carbon: 12.17)
+ImpactItem.create(name:'cheese' , carbon: 1.26)
+ImpactItem.create(name:'pork' , carbon: 2.27)
+ImpactItem.create(name:'turkey' , carbon: 2.73)
+ImpactItem.create(name:'chicken' , carbon: 1.72)
+ImpactItem.create(name:'tuna' , carbon: 0.77)
+ImpactItem.create(name:'eggs' , carbon: 0.73)
+ImpactItem.create(name:'potatoes' , carbon: 1.10)
+ImpactItem.create(name:'rice' , carbon: 0.51)
+ImpactItem.create(name:'beans' , carbon: 0.49)
+ImpactItem.create(name:'milk' , carbon: 0.95)
+ImpactItem.create(name:'car', carbon: 0.91)
+ImpactItem.create(name:'bus', carbon: 0.56)
+ImpactItem.create(name:'commuter_rail', carbon: 0.27)
+ImpactItem.create(name:'subway', carbon: 0.12)
 
 
 
