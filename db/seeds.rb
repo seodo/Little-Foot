@@ -38,8 +38,6 @@ Question.create(content: "How many times have you eaten out at a restaurant toda
 Question.create(content: "What was your mode of transportation today? How many miles for each did you travel.", category_id: 2, transportation_choices: true)
 
 
-#impact item carbon amts are in lbs
-
 ImpactItem.create(name:'beef' , carbon: 5.07)
 ImpactItem.create(name:'lamb' , carbon: 12.17)
 ImpactItem.create(name:'cheese' , carbon: 1.26)
