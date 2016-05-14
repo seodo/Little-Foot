@@ -1,11 +1,8 @@
 class SessionsController < ApplicationController
-  helper_method :current_user, :logged_in?
 
   def new
     if logged_in?
       redirect_to user_path(current_user)
-    else
-      # binding.pry
     end
   end
 
