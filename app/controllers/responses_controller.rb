@@ -12,7 +12,6 @@ class ResponsesController < ApplicationController
          Response.create(question_id: @question.id, survey_id: @survey.id, impact_item_id: impact_item.id, quantity: value.to_i)
         end
       end
-    binding.pry
     if Question.find_by(id: (@question.id + 1)).present?
      @next_question = Question.find_by(id: (@question.id + 1))
      redirect_to survey_question_path(@survey, @next_question)

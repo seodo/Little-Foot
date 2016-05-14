@@ -25,4 +25,13 @@ class Survey < ActiveRecord::Base
      footprint
   end
 
+  # def average_carbon_footprint(user)
+  #   sum_footprint = 0
+  #   user.surveys.each do |survey|
+  #     sum_footprint += survey.calculate_footprint
+  #   end
+  #   footprint_average = sum_footprint/user.surveys.count
+  # end
+
+
 end
