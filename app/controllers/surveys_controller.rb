@@ -17,6 +17,7 @@ class SurveysController < ApplicationController
   end
 
   def create
+
     if logged_in?
       @survey = Survey.create(user_id: current_user.id)
       @question = Question.find_by(id: 1)

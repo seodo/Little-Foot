@@ -22,17 +22,17 @@ lifestyle = Category.create(title: "Lifestyle")
 
 # Food
 # Question 1
-Question.create(content: "What did you have for breakfast? Check all that apply and the serving amount.", category_id: food.id)
+Question.create(content: "What did you have for breakfast? Specify the quantity for each item.", category_id: food.id)
 
 # Question 2
-Question.create(content: "What did you have for lunch? Check all that apply and the serving amount.", category_id: food.id)
+Question.create(content: "What did you have for lunch? Specify the quantity for each item.", category_id: food.id)
 
 # Question 3
-Question.create(content: "What did you have for dinner? Check all that apply and the serving amount.", category_id: food.id)
+Question.create(content: "What did you have for dinner? Specify the quantity for each item.", category_id: food.id)
 
 # Transportation
 # Question 5
-Question.create(content: "What was your mode of transportation today? How many miles for each did you travel.", category_id: transportation.id)
+Question.create(content: "Which mode of transportation did you use to commute today? How many miles for each did you travel.", category_id: transportation.id)
 
 # Lifestyle
 # Question 6
@@ -62,7 +62,7 @@ ImpactItem.create(name:'chicken' , carbon: 1.72, unit_size: '4 Ounces')
 ImpactItem.create(name:'tuna' , carbon: 0.77, unit_size: '2 Ounces')
 ImpactItem.create(name:'eggs' , carbon: 0.73, unit_size: '1 Egg')
 ImpactItem.create(name:'potatoes' , carbon: 1.10, unit_size: '6 Ounces or 1 Medium Potato')
-ImpactItem.create(name:'grains' , carbon: 0.51, unit_size: '')
+ImpactItem.create(name:'grains' , carbon: 0.51, unit_size: '3 Ounces')
 ImpactItem.create(name:'beans' , carbon: 0.49, unit_size: '4 Ounces')
 ImpactItem.create(name:'milk' , carbon: 0.95, unit_size: '8 Ounces')
 ImpactItem.create(name:'car', carbon: 0.91, unit_size: '1 mile')

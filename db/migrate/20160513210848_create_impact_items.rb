@@ -5,6 +5,7 @@ class CreateImpactItems < ActiveRecord::Migration
       t.float :carbon, null: false
       t.string :unit_size
 
+
       t.timestamps null: false
     end
   end
