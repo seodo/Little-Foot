@@ -16,27 +16,42 @@ User.create(full_name: "Patrick Swayze", email: "hello@email.com", password: "12
 User.create(full_name: "Julia Roberts", email: "hey@email.com", password: "12345678")
 User.create(full_name: "Johnny Depp", email: "hi@email.com", password: "12345678")
 
-Survey.create(user_id: 1)
-Survey.create
+food = Category.create(title: "Food")
+transportation = Category.create(title: "Transportation")
+lifestyle = Category.create(title: "Lifestyle")
 
-Category.create(title: "Food")
-Category.create(title: "Transportation")
-
+# Food
 # Question 1
-Question.create(content: "What did you have for breakfast? Check all that apply and the serving amount.", category_id: 1, food_choices: true)
+Question.create(content: "What did you have for breakfast? Check all that apply and the serving amount.", category_id: food.id)
 
 # Question 2
-Question.create(content: "What did you have for lunch? Check all that apply and the serving amount.", category_id: 1, food_choices: true)
+Question.create(content: "What did you have for lunch? Check all that apply and the serving amount.", category_id: food.id)
 
 # Question 3
-Question.create(content: "What did you have for dinner? Check all that apply and the serving amount.", category_id: 1, food_choices: true)
+Question.create(content: "What did you have for dinner? Check all that apply and the serving amount.", category_id: food.id)
 
-# Question 4
-Question.create(content: "How many times have you eaten out at a restaurant today?", category_id: 1)
-
+# Transportation
 # Question 5
-Question.create(content: "What was your mode of transportation today? How many miles for each did you travel.", category_id: 2, transportation_choices: true)
+Question.create(content: "What was your mode of transportation today? How many miles for each did you travel.", category_id: transportation.id)
 
+# Lifestyle
+# Question 6
+Question.create(content: "For how many minutes today did you use a shower?", identifier: "shower", category_id: lifestyle.id)
+
+# Question 7
+Question.create(content: "How many loads of wash laundry did you do today?", identifier: "laundry_wash", category_id: lifestyle.id)
+
+# Question 8
+Question.create(content: "How many dryer loads of laundry did you do today?", identifier: "laundry_dry",category_id: lifestyle.id)
+
+# Question 9
+Question.create(content: "How many hours of T.V. did you watch today?", identifier: "tv", category_id: lifestyle.id)
+
+# Question 10
+Question.create(content: "About how many text messages did you send today?", identifier: "text_message", category_id: lifestyle.id)
+
+# Question 11
+Question.create(content: "About how many emails did you send today?", identifier: "short_email", category_id: lifestyle.id)
 
 ImpactItem.create(name:'beef' , carbon: 5.07)
 ImpactItem.create(name:'lamb' , carbon: 12.17)
@@ -54,6 +69,9 @@ ImpactItem.create(name:'car', carbon: 0.91)
 ImpactItem.create(name:'bus', carbon: 0.56)
 ImpactItem.create(name:'commuter_rail', carbon: 0.27)
 ImpactItem.create(name:'subway', carbon: 0.12)
+
+# if this is present, we will multiply by 3.67, carbon is 0 because we are not adding to total carbon footprint in our loop to calculate carbon footprint
+ImpactItem.create(name:'eat_out', carbon: 0)
 
 # in lbs:
 ImpactItem.create( name: 'laundry_wash', carbon: 1.54 )
@@ -81,7 +99,7 @@ ImpactItem.create( name: 'short_email', carbon: 0.01 )
 ImpactItem.create( name: 'attachment_email', carbon: 0.11 )
 
 # send a text in grams. now lbs
-ImpactItem.create( name: 'text', carbon: 0.0000308647 )
+ImpactItem.create( name: 'text_message', carbon: 0.0000308647 )
 
 # using plastic bag in grams. now lbs
 ImpactItem.create( name: 'plastic_bag', carbon: 0.02 )
