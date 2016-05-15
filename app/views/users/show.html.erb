@@ -5,7 +5,17 @@
 
 <h1>Based on your past surveys, your average carbon emissions is <%=@user.average_carbon_footprint%> pounds of CO2 a day.</h1>
 
-Timeline
+<h3>Past Carbon Footprint results</h3>
+<ul>
+  <li>
+  <% @user.surveys.each do |survey| %>
+  <%=survey.created_at%>
+  <%=survey.calculate_footprint%>
+  <%end%>
+  </li>
+</ul>
+
+<%=link_to "Calculate Your Carbon Footprint", surveys_path, method: :post %>
 
 <%end%>
 
