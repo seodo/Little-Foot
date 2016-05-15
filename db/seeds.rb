@@ -76,8 +76,8 @@ ImpactItem.create(name:'subway', carbon: 0.12, unit_size: '1 mile')
 ImpactItem.create(name:'eat_out', carbon: 0)
 
 # in lbs:
-ImpactItem.create( name: 'laundry_wash', carbon: 1.54, unit_size:)
-ImpactItem.create( name: 'laundry_dry', carbon: 3.75, unit_size:)
+ImpactItem.create( name: 'laundry_wash', carbon: 1.54)
+ImpactItem.create( name: 'laundry_dry', carbon: 3.75)
 
 # hot shower. Carbon footprint in lbs per minute:
 ImpactItem.create( name: 'shower', carbon: 0.255, unit_size: '1 Minute')

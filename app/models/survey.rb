@@ -33,5 +33,18 @@ class Survey < ActiveRecord::Base
   #   footprint_average = sum_footprint/user.surveys.count
   # end
 
+  # def valid_survey_input?(key, value)
+    #value coming back is a number string i.e. "1" but we need
+    #check that it is a number and not "jdflkskl;adsjf" but
+    #converting to number .to_i goes to 0 which is a number..
+
+  #   if value.is_a? Numeric
+  #     return true
+  #   else
+  #     return false
+  #     binding.pry
+  #   end
+  # end
+
 
 end
