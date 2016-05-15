@@ -1,0 +1,33 @@
+<%if @question.identifier == "shower" %>
+  <%= text_field_tag 'shower' %>
+<% elsif @question.identifier == "laundry_wash" %>
+  <select name="laundry_wash">
+    <option value="0">0</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+  </select>
+<% elsif @question.identifier == "laundry_dry" %>
+  <select name="laundry_dry">
+    <option value="0">0</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+  </select>
+<% elsif @question.identifier == "tv" %>
+  <select name="tv">
+    <option value="0">0</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+  </select>
+<% elsif @question.identifier == "text_message" %>
+  <%= text_field_tag 'text_message' %>
+<% elsif @question.identifier == "short_email" %>
+  <%= text_field_tag 'short_email' %>
+<% end %>
+
+<%= submit_tag 'Submit' %>
