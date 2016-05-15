@@ -1,5 +1,6 @@
 <h1>Welcome to your profile, <%=@user.full_name%></h1>
 <%if current_user.surveys.present?%>
+
 <h1>Last Survey Taken: <%= @user.surveys.last.created_at
 %> Score: <%=@user.surveys.last.calculate_footprint%> pounds of CO2</h1>
 

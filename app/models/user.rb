@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   validates :full_name, :email, presence: true
   validates :email, uniqueness: true
   validates :password, length: { minimum: 8 }, allow_nil: true
-  validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :on => :create
+  validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :on => :create, message: 'email must be in the format of: myname@email.com'
 
 
 

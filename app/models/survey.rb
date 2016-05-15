@@ -11,7 +11,7 @@ class Survey < ActiveRecord::Base
       #get footprint for specific response
       footprint += response.quantity * item.carbon
     end
-    footprint
+    footprint.round(2)
   end
 
   def calculate_footprint_by_category(category)
@@ -22,7 +22,7 @@ class Survey < ActiveRecord::Base
        item = ImpactItem.find_by(id: response.impact_item_id)
        footprint += response.quantity * item.carbon
      end
-     footprint
+     footprint.round(2)
   end
 
   # def average_carbon_footprint(user)
