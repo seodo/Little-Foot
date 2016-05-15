@@ -2,3 +2,7 @@
 
 <p><%=link_to "Calculate Your Carbon Footprint", surveys_path, method: :post %></p>
 <p><%= link_to "Log In", login_path %></p>
+
+<%if current_user.present?%>
+  <h3>Check out the carbon footprint <%=link_to "leaderboard!", users_path %></h3>
+<%end%>
