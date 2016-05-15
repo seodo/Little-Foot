@@ -1,6 +1,22 @@
 <h1>Welcome to your profile, <%=@user.full_name%></h1>
+<%if current_user.surveys.present?%>
 <h1>Last Survey Taken: <%= @user.surveys.last.created_at
-%> Score: <%=@user.surveys.last.calculate_footprint%></h1>
+%> Score: <%=@user.surveys.last.calculate_footprint%> pounds of CO2</h1>
 
+<h1>Based on your past surveys, your average carbon emissions is <%=@user.average_carbon_footprint%> pounds of CO2 a day.</h1>
+
+<h3>Past Carbon Footprint results</h3>
+<ul>
+  <% @user.surveys.each do |survey| %>
+  <li>
+  <%=survey.created_at%>
+  <%=survey.calculate_footprint%> pounds of CO2
+  </li>
+  <%end%>
+</ul>
+
+<%=link_to "Calculate Your Carbon Footprint", surveys_path, method: :post %>
+
+<%end%>
 
 
