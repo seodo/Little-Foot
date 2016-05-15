@@ -39,19 +39,19 @@ Question.create(content: "Which mode of transportation did you use to commute to
 Question.create(content: "For how many minutes today did you use a shower?", identifier: "shower", category_id: lifestyle.id)
 
 # Question 7
-Question.create(content: "How many loads of wash laundry did you do today?", identifier: "laundry_wash", category_id: lifestyle.id)
+Question.create(content: "How many loads of laundry did you wash today?", identifier: "laundry_wash", category_id: lifestyle.id)
 
 # Question 8
-Question.create(content: "How many dryer loads of laundry did you do today?", identifier: "laundry_dry",category_id: lifestyle.id)
+Question.create(content: "How many loads of laundry did you dry today?", identifier: "laundry_dry",category_id: lifestyle.id)
 
 # Question 9
 Question.create(content: "How many hours of T.V. did you watch today?", identifier: "tv", category_id: lifestyle.id)
 
 # Question 10
-Question.create(content: "About how many text messages did you send today?", identifier: "text_message", category_id: lifestyle.id)
+Question.create(content: "Approximately how many text messages did you send today?", identifier: "text_message", category_id: lifestyle.id)
 
 # Question 11
-Question.create(content: "About how many emails did you send today?", identifier: "short_email", category_id: lifestyle.id)
+Question.create(content: "Approximately how many emails did you send today?", identifier: "short_email", category_id: lifestyle.id)
 
 ImpactItem.create(name:'beef' , carbon: 5.07, unit_size: '3 Ounces')
 ImpactItem.create(name:'lamb' , carbon: 12.17,unit_size: '5 Ounces')
