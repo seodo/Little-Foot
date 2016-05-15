@@ -8,14 +8,17 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 8 }, allow_nil: true
   validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :on => :create, message: 'email must be in the format of: myname@email.com'
 
-
+  def get_timeline(surveys)
+    # returns in minutes, will change to days for final.
+    surveys.each_cons(2).map { |a, b| ((b.created_at - a.created_at)/60).round(2) }
+  end
 
   def average_carbon_footprint
     sum_footprint = 0
     self.surveys.each do |survey|
       sum_footprint += survey.calculate_footprint
     end
-    footprint_average = sum_footprint/self.surveys.count
+    footprint_average = (sum_footprint/self.surveys.count).round(2)
   end
 
 

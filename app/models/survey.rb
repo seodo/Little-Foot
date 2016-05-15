@@ -14,6 +14,10 @@ class Survey < ActiveRecord::Base
     footprint.round(2)
   end
 
+  def format_date(date)
+    date.strftime("%m/%d/%Y")
+  end
+
   def calculate_footprint_by_category(category)
     footprint = 0
     category_responses = self.responses.select { |response| Category.find_by(id: response.question.category_id).title.downcase == category.downcase }
