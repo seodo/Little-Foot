@@ -4,4 +4,7 @@ class Response < ActiveRecord::Base
   has_one :impact_item
 
   validates :question_id, presence: true
+
+
+
 end

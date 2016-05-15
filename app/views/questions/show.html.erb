@@ -4,6 +4,10 @@
 <% transportation_category = 2 %>
 <% lifestyle_category = 3 %>
 
+  <% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% end %>
+
 <%=form_tag '/responses' %>
 <%=label_tag @question.content %>
 <%=hidden_field_tag 'survey_id', @survey.id %>

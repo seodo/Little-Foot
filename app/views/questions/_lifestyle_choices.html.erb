@@ -1,5 +1,5 @@
 <%if @question.identifier == "shower" %>
-  <%= text_field_tag 'shower' %>
+  <%= number_field_tag 'shower', step: 0.01 %>
 <% elsif @question.identifier == "laundry_wash" %>
   <select name="laundry_wash">
     <option value="0">0</option>
@@ -25,9 +25,9 @@
     <option value="4">4</option>
   </select>
 <% elsif @question.identifier == "text_message" %>
-  <%= text_field_tag 'text_message' %>
+  <%= number_field_tag 'text_message', step: 0.01 %>
 <% elsif @question.identifier == "short_email" %>
-  <%= text_field_tag 'short_email' %>
+  <%= number_field_tag 'short_email', step: 0.01 %>
 <% end %>
 
 <%= submit_tag 'Submit' %>

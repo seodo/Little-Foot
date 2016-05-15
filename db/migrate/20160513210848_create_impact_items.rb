@@ -3,6 +3,8 @@ class CreateImpactItems < ActiveRecord::Migration
     create_table :impact_items do |t|
       t.string :name, null: false
       t.float :carbon, null: false
+      t.string :unit_size
+
 
       t.timestamps null: false
     end

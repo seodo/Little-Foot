@@ -9,10 +9,17 @@ class ResponsesController < ApplicationController
       eat_out_multiplyer = 3.67
     end
       params.each do |key, value|
-        if ImpactItem.find_by(name: key) && value.to_i > 0
-          impact_item = ImpactItem.find_by(name: key)
-         Response.create(question_id: @question.id, survey_id: @survey.id, impact_item_id: impact_item.id, quantity: value.to_i * eat_out_multiplyer)
-        end
+        # if ImpactItem.find_by(name: key)
+          # if @survey.valid_survey_input?(key, value)
+            if ImpactItem.find_by(name: key) && value.to_i > 0
+              impact_item = ImpactItem.find_by(name: key)
+             Response.create(question_id: @question.id, survey_id: @survey.id, impact_item_id: impact_item.id, quantity: value.to_i * eat_out_multiplyer)
+            end
+          # else
+          #   flash[:notice] = "You must enter a valid number"
+          #   return redirect_to survey_question_path(@survey, @question)
+          # end
+        # end
       end
     if Question.find_by(id: (@question.id + 1)).present?
      @next_question = Question.find_by(id: (@question.id + 1))
@@ -21,4 +28,5 @@ class ResponsesController < ApplicationController
       redirect_to survey_path(@survey)
     end
   end
+
 end
