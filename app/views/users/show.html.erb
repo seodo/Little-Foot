@@ -1,23 +1,24 @@
 <h1>Welcome to your profile, <%=@user.full_name%></h1>
 <%if current_user.surveys.present?%>
+  <%if @user.surveys.last %>
+    <h1>Last Survey Taken: <%= @user.surveys.last.created_at
+    %> Score: <%=@user.surveys.last.calculate_footprint%> pounds of CO2</h1>
 
-<h1>Last Survey Taken: <%= @user.surveys.last.created_at
-%> Score: <%=@user.surveys.last.calculate_footprint%> pounds of CO2</h1>
+    <h1>Based on your past surveys, your average carbon emissions is <%=@user.average_carbon_footprint%> pounds of CO2 a day.</h1>
 
-<h1>Based on your past surveys, your average carbon emissions is <%=@user.average_carbon_footprint%> pounds of CO2 a day.</h1>
-
-<h3>Past Carbon Footprint results</h3>
-<ul>
-  <% @user.surveys.each do |survey| %>
-  <li>
-  <%=survey.created_at%>
-  <%=survey.calculate_footprint%> pounds of CO2
-  </li>
+    <h3>Past Carbon Footprint results</h3>
+    <ul>
+      <% @user.surveys.each do |survey| %>
+      <li>
+      <%=survey.created_at%>
+      <%=survey.calculate_footprint%> pounds of CO2
+      </li>
+      <%end%>
+    </ul>
   <%end%>
-</ul>
-
-<%=link_to "Calculate Your Carbon Footprint", surveys_path, method: :post %>
-
+<% else %>
+  <h3>Hey <%=@user.full_name%>, you haven't taken any survey's yet! <%= link_to "Login", login_path %> or <%= link_to "Register", new_user_path %> to calculate and track your progress!</h3>
+  <%=link_to "Skip login and calculate Carbon Footprint", surveys_path, method: :post %>
 <%end%>
 
 

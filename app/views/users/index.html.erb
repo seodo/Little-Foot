@@ -1,0 +1,12 @@
+<% @users.each do |user| %>
+  <%= link_to user.full_name, user_path(user) %>
+  <% if user.surveys.present?%>
+  <ul>
+    <li>Last Carbon footprint calculated on <%= user.surveys.last.created_at %>:</li>
+    <li><%= user.surveys.last.calculate_footprint %> pounds of CO2</li>
+  <%else%>
+    <li>No carbon footprints calculated yet</li>
+  <%end%>
+
+  </ul>
+<%end%>

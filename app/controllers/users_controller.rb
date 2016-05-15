@@ -1,4 +1,9 @@
 class UsersController < ApplicationController
+
+  def index
+    @users = User.all
+  end
+
   def new
     @user = User.new
   end
@@ -15,11 +20,15 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by(id: params[:id])
-    if @user
-      render 'show'
+    if logged_in?
+      @user = User.find_by(id: params[:id])
+      if @user
+        render 'show'
+      else
+        redirect_to root_path
+      end
     else
-      redirect_to root_path
+      render partial: 'shared/unauthorized'
     end
   end
 

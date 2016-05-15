@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-  resources :users, except: [:index]
+  resources :users
 
   resources :surveys, only: [:create, :show] do
     resources :questions, only: [:show]
