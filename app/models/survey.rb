@@ -16,11 +16,6 @@ class Survey < ActiveRecord::Base
 
   def worst_response_carbon_offender
     worst_response = self.responses.max_by { |response| ImpactItem.find_by(id: response.impact_item_id).carbon * response.quantity}
-
-
-    # worst_response_impact_item = ImpactItem.find_by(id: worst_response.impact_item_id)
-    # worst_response.quantity * worst_response_impact_item.carbon
-
   end
 
   def worst_question_carbon_offender

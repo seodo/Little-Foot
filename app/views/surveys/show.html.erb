@@ -1,4 +1,4 @@
-<h1>End of Survey Results</h1>
+<h1>Calculated Results</h1>
 <h2>Total Carbon Footprint:
   <%= @survey.calculate_footprint%> pounds of CO2</h2>
 
@@ -12,8 +12,13 @@
 <p><%= @survey.calculate_footprint_by_category('lifestyle')%> pounds of CO2</p>
 
 
-<li>Worst Impact Item</li>
-<p><%= @survey.worst_impact_item_carbon_offender.name%> Carbon amount: <%= (@survey.worst_response_carbon_offender.quantity * @survey.worst_impact_item_carbon_offender.carbon)%> Survey Question: <%=@survey.worst_question_carbon_offender.content %></p>
+<li>Worst Item calculated</li>
+<p>The survey question was: <%=@survey.worst_question_carbon_offender.content %></p>
+<p>Your answer: <%= @survey.worst_impact_item_carbon_offender.name %></p>
+<p>Quantity: <%= @survey.worst_response_carbon_offender.quantity %>
+<p>Carbon amount: <%= @survey.worst_impact_item_carbon_offender.carbon %></p>
+<p>Total carbon footprint for this response: <%= (@survey.worst_impact_item_carbon_offender.carbon * @survey.worst_impact_item_carbon_offender.carbon).round(2) %> pounds of CO2 </p>
+<p>Tips for reducing: <%= @survey.worst_impact_item_carbon_offender.suggestion %></p>
 </ul>
 
 <%=link_to "Calculate Your Carbon Footprint", surveys_path, method: :post %>
