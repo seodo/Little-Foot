@@ -16,4 +16,53 @@
 
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+$(function(){ $(document).foundation();
+
+$(document).ready(function () {
+
+        // Build the chart
+        $('#container').highcharts({
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: 'Category percentages of survey results'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: false
+                    },
+                    showInLegend: true
+                }
+            },
+            series: [{
+                name: 'Category',
+                colorByPoint: true,
+                data: [{
+                    name: 'Food',
+                    y: 25
+                }, {
+                    name: 'Transportation',
+                    y: 25,
+                    sliced: true,
+                    selected: true
+                }, {
+                    name: 'Lifestyle',
+                    y: 50
+                }]
+            }]
+        });
+    });
+
+
+
+});
