@@ -11,55 +11,6 @@
   <% end %>
 </ul>
 <% end %>
-
-<%= form_tag(users_path, method: 'post') do %>
-  <div class="row">
-    <div class="small-3 columns">
-      <%= label_tag :full_name %><br />
-      <%= text_field_tag "user[full_name]" %>
-    </div>
-
-    <div class="small-3 columns">
-      <%= label_tag 'Upload photo' %><br />
-      <%= file_field_tag "user[image_url]" %>
-    </div>
-
-    <div class="small-3 columns">
-      <%= label_tag :email %><br/>
-      <%= text_field_tag 'user[email]', nil, placeholder: "email@email.com" %>
-    </div>
-
-    <div class="small-3 columns">
-      <%= label_tag :password %><br/>
-      <%= password_field_tag 'user[password]' %>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="small-4 columns">
-      <%= label_tag :bio %><br/>
-      <%= text_area_tag 'user[bio]' %>
-    </div>
-
-    <div class="small-1 columns">
-      <%= label_tag :city %><br/>
-      <%= text_field_tag 'user[city]' %>
-    </div>
-
-    <div class="small-2 columns">
-      <%= label_tag :state %><br/>
-      <%= text_field_tag 'user[state]' %>
-    </div>
-
-        <div class="small-5 columns">
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="small-3 columns">
-      <%= submit_tag('Register', :class => "btn btn-warning") %>
-    </div>
-  </div>
-<% end %>
+<%= render 'new.html.erb' %>
 
 
