@@ -13,12 +13,33 @@
 
 
 <li>Worst Item calculated</li>
-<p>The survey question was: <%=@survey.worst_question_carbon_offender.content %></p>
-<p>Your answer: <%= @survey.worst_impact_item_carbon_offender.name %></p>
-<p>Quantity: <%= @survey.worst_response_carbon_offender.quantity %>
-<p>Carbon amount: <%= @survey.worst_impact_item_carbon_offender.carbon %></p>
-<p>Total carbon footprint for this response: <%= (@survey.worst_impact_item_carbon_offender.carbon * @survey.worst_impact_item_carbon_offender.carbon).round(2) %> pounds of CO2 </p>
-<p>Tips for reducing: <%= @survey.worst_impact_item_carbon_offender.suggestion %></p>
+  <table id='worst-impact-item-table'>
+    <tr>
+     <td>The survey question was:</td>
+     <td><%=@survey.worst_question_carbon_offender.content %></td>
+    </tr>
+    <tr>
+     <td>Your answer: </td>
+     <td><%= @survey.worst_impact_item_carbon_offender.name %></td>
+    </tr>
+    <tr>
+      <td>Quantity:</td>
+      <td><%= @survey.worst_response_carbon_offender.quantity %></td>
+    </tr>
+    <tr>
+      <td>Carbon amount:</td>
+      <td><%= @survey.worst_impact_item_carbon_offender.carbon %></td>
+    </tr>
+    <tr>
+      <td>Total carbon footprint for this response:</td>
+      <td><%= (@survey.worst_impact_item_carbon_offender.carbon * @survey.worst_impact_item_carbon_offender.carbon).round(2) %> pounds of CO2</td>
+    </tr>
+    <tr>
+      <td>Tips for reducing:</td>
+      <td><%= @survey.worst_impact_item_carbon_offender.suggestion %></td>
+    </tr>
+  </table>
+
 </ul>
 
 <%=link_to "Calculate Your Carbon Footprint", surveys_path, method: :post %>
