@@ -6,7 +6,6 @@ $(document).ready(function() {
           url: $target.attr('href')
         }).done(function(response){
             $('#buttons-box').hide();
-            // $('#horse-list').append(response);
             $('#main').html(response).hide().fadeIn(500);
         })
     })

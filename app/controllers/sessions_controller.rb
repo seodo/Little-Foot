@@ -3,6 +3,10 @@ class SessionsController < ApplicationController
   def new
     if logged_in?
       redirect_to user_path(current_user)
+    elsif request.xhr?
+      render partial: 'sessions/new'
+    else
+      render 'new'
     end
   end
 
