@@ -31,10 +31,14 @@
     <% end %>
 
   </div>
-  <div class="small-5 medium-4 columns">
-    <%= link_to "Log In", login_path, class: "button", id: "login" %>
+
+  <div class="small-4 columns">
+    <%= link_to "Log In", login_path, class: "login-button button" %>
   </div>
-  <div class="small-1 medium-2 columns"></div>
+
+  <div class="small-4 columns">
+    <%= link_to "Register", new_user_path, class: "register-button button" %>
+  </div>
 </div>
 
 <%end%>

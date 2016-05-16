@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('#login').on('click', function(event){
+  $('.login-button').on('click', function(event){
     event.preventDefault();
       var $target = $(event.target)
         $.ajax({
