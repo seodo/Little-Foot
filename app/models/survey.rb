@@ -14,6 +14,23 @@ class Survey < ActiveRecord::Base
     footprint.round(2)
   end
 
+  def worst_response_carbon_offender
+    worst_response = self.responses.max_by { |response| ImpactItem.find_by(id: response.impact_item_id).carbon * response.quantity}
+
+
+    # worst_response_impact_item = ImpactItem.find_by(id: worst_response.impact_item_id)
+    # worst_response.quantity * worst_response_impact_item.carbon
+
+  end
+
+  def worst_question_carbon_offender
+    Question.find_by(id: worst_response_carbon_offender.question_id)
+  end
+
+  def worst_impact_item_carbon_offender
+    ImpactItem.find_by(id: worst_response_carbon_offender.impact_item_id)
+  end
+
   def format_date(date)
     date.strftime("%m/%d/%Y")
   end

@@ -10,6 +10,10 @@
 <p><%= @survey.calculate_footprint_by_category('transportation')%> pounds of CO2</p>
 <li>Lifestyle</li>
 <p><%= @survey.calculate_footprint_by_category('lifestyle')%> pounds of CO2</p>
+
+
+<li>Worst Impact Item</li>
+<p><%= @survey.worst_impact_item_carbon_offender.name%> Carbon amount: <%= (@survey.worst_response_carbon_offender.quantity * @survey.worst_impact_item_carbon_offender.carbon)%> Survey Question: <%=@survey.worst_question_carbon_offender.content %></p>
 </ul>
 
 <%=link_to "Calculate Your Carbon Footprint", surveys_path, method: :post %>
