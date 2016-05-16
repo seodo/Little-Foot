@@ -1,5 +1,5 @@
 class ImpactItem < ActiveRecord::Base
-  belongs_to :response
+  has_one :response
 end
 
 
