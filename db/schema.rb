@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20160516150847) do
     t.string   "name",       null: false
     t.float    "carbon",     null: false
     t.string   "unit_size"
+    t.string   "suggestion"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
