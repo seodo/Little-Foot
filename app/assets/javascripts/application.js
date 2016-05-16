@@ -29,7 +29,7 @@ $(document).ready(function () {
                 type: 'pie'
             },
             title: {
-                text: 'Category percentages of survey results'
+                text: 'Category Percentages of Survey Results'
             },
             tooltip: {
                 pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -49,15 +49,15 @@ $(document).ready(function () {
                 colorByPoint: true,
                 data: [{
                     name: 'Food',
-                    y: 25
+                    y: parseFloat($('#food-data').html())/parseFloat($('#total-carbon').html())*100
                 }, {
                     name: 'Transportation',
-                    y: 25,
+                    y: parseFloat($('#transportation-data').html())/parseFloat($('#total-carbon').html())*100,
                     sliced: true,
                     selected: true
                 }, {
                     name: 'Lifestyle',
-                    y: 50
+                    y: parseFloat($('#lifestyle-data').html())/parseFloat($('#total-carbon').html())*100
                 }]
             }]
         });
