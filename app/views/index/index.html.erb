@@ -1,6 +1,12 @@
-<div class="row" id="head">
+<div class="row">
+  <div class="small-12 columns" id="form-container">
+  </div>
+</div>
+
+
+<div class="row">
   <div class="small-1 medium-3 columns"></div>
-  <div class="small-10 medium-8 columns">
+  <div class="small-10 medium-8 columns" id="main">
     <h3 class="text-center">Our Story</h3>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quid, de quo nulla dissensio est? Ita multo sanguine profuso in laetitia et in victoria est mortuus. Vitae autem degendae ratio maxime quidem illis placuit quieta. Duo Reges: constructio interrete. In qua quid est boni praeter summam voluptatem, et eam sempiternam? Claudii libidini, qui tum erat summo ne imperio, dederetur. Quo modo autem philosophus loquitur? Ergo, si semel tristior effectus est, hilara vita amissa est?
@@ -13,8 +19,8 @@
   <div class="small-1 medium-1 columns"></div>
 
 
-
-<div class="row">
+<%if !current_user.present?%>
+<div class="row" id="buttons-box">
   <div class="small-1 medium-2 columns"></div>
   <div class="small-5 medium-4 columns">
 
@@ -30,6 +36,9 @@
   </div>
   <div class="small-1 medium-2 columns"></div>
 </div>
+
+<%end%>
+
 
 <%if current_user.present?%>
   <h3>Check out the carbon footprint <%=link_to "leaderboard!", users_path %></h3>

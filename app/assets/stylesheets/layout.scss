@@ -4,16 +4,16 @@ body ul li {
 h1 {
   font-size: 60px;
 }
-.top-bar {
-  margin: 0 auto;
-}
-.name {
-  display: inline-block;
-  margin: 0 auto;
-  padding: 0px;
-}
 
 #head img {
   width: 110px;
   height: 80px;
+}
+
+.small .name  {
+    display: inline;
+}
+
+.button {
+  width: 300px;
 }
