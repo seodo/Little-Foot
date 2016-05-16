@@ -115,6 +115,23 @@ ImpactItem.create( name: 'hair_dryer', carbon: 0.02, unit_size: '1 Minute')
 # toilet paper per sheet unrecycled in grams. now lbs
 ImpactItem.create( name: 'toilet_paper', carbon: 0.004, unit_size: '1 Sheet')
 
+Fact.create(content: "Meat based diets have the highest carbon footprint at 3.3 tons of greenhouse gas emissions. A vegan diet has the lowest carbon footprint at just 1.5 tons CO2e. You can reduce your foodprint by a quarter just by cutting down on red meats such as beef and lamb", category_id: 1)
+Fact.create(content:"The carbon footprint of a vegetarian diet is about half that of a meat-lover’s diet.", category_id: 1)
+Fact.create(content: "Approximately 13% of U.S. greenhouse gas emissions result from the production and transport of food.", category_id: 1)
+Fact.create(content: "Organic farming methods for both crops and animals have a much lower impact on the environment than conventional methods.", category_id: 1)
+Fact.create(content: "Check the label – a long list of ingredients generally means a heavily processed item with a high carbon footprint", category_id: 1)
+Fact.create(content: "Frozen food has the highest carbon footprint, followed by canned, plastic, glass, then cardboard", category_id: 1)
+Fact.create(content: "A typical restaurant meal’s CO2e emissions is 3.67 times the CO2e emissions of a meal prepared and eaten at home", category_id: 1)
+Fact.create(content: "The carbon footprint of a six-pack of beer from New Belgium Brewing Co. is about seven pounds", category_id: 1)
+Fact.create(content: "You could save more than a ton of CO2 per year by accelerating slowly and smoothly, driving the speed limit, maintaining a steady speed, and anticipating your stops and starts.", category_id: 2)
+Fact.create(content: "Keeping your tires properly inflated can can save 400-700 pounds of CO2 per year.", category_id: 2)
+Fact.create(content: "For every mile it travels, the average car in the U.S. emits about one pound of carbon dioxide, which translates into about five tons of carbon dioxide per car per year", category_id: 2)
+Fact.create(content: "Park your car once a day if possible and work from home or just walk to your destination. Carpooling is a great way to help reduce carbon emissions.", category_id: 2)
+Fact.create(content: "Washing and drying a load every two days creates around 440kg of CO2e each year, which is equivalent to flying from London to Glasgow and back with 15-mile taxi rides to and from the airports.", category_id: 3)
+Fact.create(content: "A household running a dryer 200 times a year could save nearly half a tonne of CO2e by switching to a clothes rack or washing line.", category_id: 3)
+Fact.create(content: "The U.S. emits the equivalent of about 118 pounds of carbon dioxide per resident every day.", category_id: 3)
+Fact.create(content: "Take a shower rather than a bath and shower less often in less time", category_id: 3)
+Fact.create(content: "Turn off lights you’re not using and when you leave the room. Replace incandescent light bulbs with compact flourescent or LED ones.", category_id: 3)
 
 
 
