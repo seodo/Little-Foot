@@ -10,7 +10,7 @@
     <ul>
       <% @user.surveys.each do |survey| %>
         <li>
-        <%=survey.format_date(survey.created_at)%>
+        <%=format_date(survey.created_at)%>
         <%=survey.calculate_footprint%> pounds of CO2
         </li>
       <%end%>
