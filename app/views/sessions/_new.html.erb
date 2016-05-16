@@ -2,31 +2,31 @@
   <div class="small-4 columns"></div>
 
   <div class="small-4 columns">
-    <h1 id="sign-up-header">Log In</h1>
+    <h2 class="form-group">Log In</h2>
   </div>
 
   <div class="small-4 columns"></div>
 </div>
 
-<div class="row">
-  <div class="small-4 columns"></div>
-  <div class="small-4 columns">
+<div class="row form-group">
+  <div class="small-12 columns">
     <%= form_tag('/login', method: 'post') do %>
       <%= label_tag('Email') %><br />
       <%= text_field_tag(:email) %>
   </div>
-  <div class="small-4 columns"></div>
 </div>
 
-<div class="row">
-  <div class="small-4 columns"></div>
-  <div class="small-4 columns">
+<div class="row form-group">
+  <div class="small-12 columns">
     <%= label_tag('Password') %><br />
     <%= password_field_tag(:password) %>
   </div>
-  <div class="small-4 columns"></div>
 </div>
-    <%= submit_tag('Log In', :class => "btn btn-warning") %>
+</div>
 
+<div class="row form-group">
+  <div class="small-12">
+    <%= submit_tag('Log In', :class => "btn btn-warning") %>
+  </div>
   <% end %>
 </div>
