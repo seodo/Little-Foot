@@ -24,16 +24,37 @@ class UsersController < ApplicationController
     end
   end
 
-  def show
-    if logged_in?
-      @user = User.find_by(id: params[:id])
-      if @user
-        render 'show'
+  # def show
+  #   if logged_in?
+  #     @user = User.find_by(id: params[:id])
+  #     if @user
+  #       render 'show'
+  #     else
+  #       redirect_to root_path
+  #     end
+  #   else
+  #     render partial: 'shared/unauthorized'
+  #   end
+  # end
+
+
+def show
+  @user = User.find_by(id: params[:id])
+  @surveys = @user.surveys.last(10)
+# @scores = surveys.map do |survey|
+#   survey.calculate_footprint_by_category('food')
+#   survey.calculate_footprint_by_category('transportation')
+#   survey.calculate_footprint_by_category('lifestyle')
+# end
+
+    if @user == current_user
+      if request.xhr?
+        # render :json => surveys
       else
-        redirect_to root_path
+        render 'show'
       end
     else
-      render partial: 'shared/unauthorized'
+      redirect_to root_path
     end
   end
 

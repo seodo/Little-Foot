@@ -1,10 +1,14 @@
 <h1>Welcome, <%=@user.full_name%></h1>
 <%if current_user.surveys.present?%>
   <%if @user.surveys.last %>
-    <h2>Last survey taken on <%= @user.surveys.last.format_date(@user.surveys.last.created_at)%>
+    <h2>Last survey taken on <%= format_date(@user.surveys.last.created_at)%>
       Score: <%=@user.surveys.last.calculate_footprint%> pounds of CO2</h2>
 
     <h2>Based on your past surveys, your average carbon emissions is <%=@user.average_carbon_footprint%> pounds of CO2 a day.</h2>
+
+    <div id="bar-container" style="width:100%; height:400px;"></div>
+
+
 
     <h3>Past Carbon Footprint results</h3>
     <ul>
@@ -14,7 +18,7 @@
         <%=survey.calculate_footprint%> pounds of CO2
         </li>
       <%end%>
-      <%= @user.get_timeline(@user.surveys) %>
+
 
     </ul>
   <%end%>
