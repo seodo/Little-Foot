@@ -25,5 +25,18 @@ h1 {
 }
 
 .top-bar {
-  border-bottom: 1px solid #978D4F;
+  border-bottom: 1px solid #C58E4D;
+  margin-left: 140px;
+}
+
+.breadcrumbs {
+  padding: 0px 55px;
+  margin: 0px;
+}
+
+.nav-button {
+  width: 300px;
+  height: 45px;
+  border-radius: 10px;
+  background-color: #C58E4D
 }

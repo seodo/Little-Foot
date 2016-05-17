@@ -61,7 +61,7 @@ $chocolate: #4B3414;
 $brown: #C58E4D;
 $ivory: #E2D9A6;
 
-$medium-gray: #cacaca;
+$medium-gray: #C58E4D;
 $dark-gray: #8a8a8a;
 $black: #0a0a0a;
 $white: #fefefe;
@@ -242,7 +242,7 @@ $button-padding: 0.85em 1em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $primary-color;
-$button-background-hover: scale-color($button-background, $lightness: -15%);
+$button-background-hover: scale-color($button-background, $lightness: -40%);
 $button-color: $ivory;
 $button-color-alt: $black;
 $button-radius: $global-radius;
