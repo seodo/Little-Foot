@@ -1,5 +1,7 @@
 $(document).ready(function(event){
+  console.log('Hello');
   navigator.geolocation.getCurrentPosition(function(position) {
+    console.log('Got position');
     $('#survey_latitude').val(position.coords.latitude);
     $('#survey_longitude').val(position.coords.longitude);
   });
@@ -38,11 +40,12 @@ function getPoints() {
     url: "/surveys",
     dataType: "JSON"
   }).done(function (response){
-    var locations = []
-    for(var i = 0; i < response.length; i++) {
-      console.log(response[i].latitude)
-
+    var points = [];
+    for(var i = 0; i < response.surveys.length; i++) {
+    points[i] = [response.surveys[i].id, response.surveys[i].latitude, response.surveys[i].longitude, response.surveys[i].carbon_footprint]
+      // console.log(response[i].latitude)
     }
+    debugger
 
     // for (var latitude in response) {
     //   if (response.hasOwnProperty(latitude)) {
@@ -50,7 +53,6 @@ function getPoints() {
     //     alert(lattitude + " -> " + response[latitude]);
     //   }
     // }
-    alert(response);
   })
 }
 

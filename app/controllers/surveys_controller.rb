@@ -2,9 +2,6 @@ class SurveysController < ApplicationController
 
   def index
     @surveys = Survey.all
-    if request.xhr?
-      render :json => @surveys
-    end
   end
 
   def show
