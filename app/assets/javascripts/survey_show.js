@@ -6,7 +6,6 @@ $(document).ready(function(event){
 });
 
    function initMap() {
-
       var survey_lat = parseFloat($('#lat').val());
       var survey_lng = parseFloat($('#lng').val());
       var myLatLng = {lat: survey_lat, lng: survey_lng};
@@ -15,10 +14,21 @@ $(document).ready(function(event){
         center: {lat: survey_lat, lng: survey_lng},
         zoom: 8
       });
-      var marker = new google.maps.Marker({
+      marker = new google.maps.Marker({
           position: myLatLng,
+          animation: google.maps.Animation.DROP,
           title:"Hello World!"
       });
       marker.setMap(map);
+      marker.addListener('click', toggleBounce);
+   }
 
-    }
+function toggleBounce() {
+  if (marker.getAnimation() !== null) {
+    marker.setAnimation(null);
+  } else {
+    marker.setAnimation(google.maps.Animation.BOUNCE);
+  }
+}
+
+

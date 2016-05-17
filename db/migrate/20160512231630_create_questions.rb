@@ -4,7 +4,6 @@ class CreateQuestions < ActiveRecord::Migration
       t.string :content, null: false
       t.string :identifier
       t.integer :category_id, null: false
-      t.integer :follow_up_id
       t.boolean :lifestyle_choices
 
       t.timestamps null: false
