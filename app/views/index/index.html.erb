@@ -11,22 +11,25 @@
     </p>
   </div>
   <div class="small-1 medium-1 columns"></div>
-</div>
 
 
 
 <div class="row">
   <div class="small-1 medium-2 columns"></div>
   <div class="small-5 medium-4 columns">
-    <%=link_to "Calculate Your Carbon Footprint", surveys_path, method: :post, class: "button" %>
+
+    <%= form_for Survey.new do |f| %>
+      <%= f.hidden_field :latitude %>
+      <%= f.hidden_field :longitude %>
+      <%= f.submit "Calculate Your Carbon Footprint", class:"button" %>
+    <% end %>
+
   </div>
   <div class="small-5 medium-4 columns">
     <%= link_to "Log In", login_path, class: "button" %>
   </div>
   <div class="small-1 medium-2 columns"></div>
 </div>
-
-
 
 <%if current_user.present?%>
   <h3>Check out the carbon footprint <%=link_to "leaderboard!", users_path %></h3>

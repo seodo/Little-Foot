@@ -39,7 +39,25 @@
       <td><%= @survey.worst_response_carbon_offender.impact_item.suggestion %></td>
     </tr>
   </table>
-
 </ul>
+  <style>
+    #map {
+      width: 500px;
+      height: 400px;
+      margin: auto;
+    }
+  </style>
+
+  <input id='lat' type='hidden' value='<%=@survey.latitude%>'>
+  <input id='lng' type='hidden' value='<%=@survey.longitude%>'>
+
+  <input id='radius'>
+
+
+<div id="map"></div>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=ASK-PATRICK-FOR-KEY&callback=initMap"
+  type="text/javascript"></script>
 
 <%=link_to "Calculate Your Carbon Footprint", surveys_path, method: :post %>
+
+
