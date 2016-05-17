@@ -1,47 +1,16 @@
+<div class="row">
+  <div class="small-12 columns">
+    <h2>Sign Up</h2>
+  </div>
+</div>
 
-  <h1>Sign Up</h1>
-
-  <% if @errors %>
-  <ul>
-    <% @errors.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ul>
+<% if @errors %>
+<ul>
+  <% @errors.each do |message| %>
+    <li><%= message %></li>
   <% end %>
-
-  <%= form_tag(users_path, method: 'post') do %>
-    <ul>
-      <li>
-        <%= label_tag :full_name %><br />
-        <%= text_field_tag "user[full_name]" %>
-      </li>
-       <li>
-        <%= label_tag 'Upload photo' %><br />
-        <%= file_field_tag "user[image_url]" %>
-      </li>
-      <li>
-        <%= label_tag :email %><br/>
-        <%= text_field_tag 'user[email]', nil, placeholder: "email@email.com" %>
-      </li>
-      <li>
-        <%= label_tag :password %><br/>
-        <%= password_field_tag 'user[password]' %>
-      </li>
-      <li>
-        <%= label_tag :bio %><br/>
-        <%= text_field_tag 'user[bio]' %>
-      </li>
-        <li>
-        <%= label_tag :city %><br/>
-        <%= text_field_tag 'user[city]' %>
-      </li>
-      <li>
-        <%= label_tag :state %><br/>
-        <%= text_field_tag 'user[state]' %>
-      </li>
-       <li><%= submit_tag('Register', :class => "btn btn-warning") %></li>
-    </ul>
-  <% end %>
-
+</ul>
+<% end %>
+<%= render 'new.html.erb' %>
 
 

@@ -6,6 +6,11 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    if request.xhr?
+      render partial: 'users/new'
+    else
+      render 'new'
+    end
   end
 
   def create

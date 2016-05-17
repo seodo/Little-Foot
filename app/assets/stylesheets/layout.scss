@@ -4,16 +4,26 @@ body ul li {
 h1 {
   font-size: 60px;
 }
-.top-bar {
-  margin: 0 auto;
-}
-.name {
-  display: inline-block;
-  margin: 0 auto;
-  padding: 0px;
-}
 
 #head img {
   width: 110px;
   height: 80px;
+}
+
+.small .name  {
+    display: inline;
+}
+
+.button {
+  width: 250px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.form-group {
+  width: 400px;
+}
+
+.top-bar {
+  border-bottom: 1px solid #978D4F;
 }
