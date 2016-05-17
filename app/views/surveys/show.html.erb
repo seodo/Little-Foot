@@ -38,6 +38,12 @@
       <td>Tips for reducing:</td>
       <td><%= @survey.worst_response_carbon_offender.impact_item.suggestion %></td>
     </tr>
+    <%if @survey.worst_response_carbon_offender.multiplier %>
+    <tr>
+      <td>Note, you selected this as a <%= @survey.worst_response_carbon_offender.multiplier.name %>, this means that the carbon impact of this item because of this is multiplied by <%= @survey.worst_response_carbon_offender.multiplier.value%>. So <%= (@survey.worst_response_carbon_offender.quantity)/(@survey.worst_response_carbon_offender.multiplier.value) %> multiplied by <%= @survey.worst_response_carbon_offender.multiplier.value %> = <%= @survey.worst_response_carbon_offender.quantity %></td>
+      <td><%= @survey.worst_response_carbon_offender.multiplier.suggestion %></td>
+    </tr>
+    <% end %>
   </table>
 </ul>
   <style>
@@ -50,8 +56,6 @@
 
   <input id='lat' type='hidden' value='<%=@survey.latitude%>'>
   <input id='lng' type='hidden' value='<%=@survey.longitude%>'>
-
-  <input id='radius'>
 
 
 <div id="map"></div>

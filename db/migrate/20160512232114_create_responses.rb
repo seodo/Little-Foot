@@ -5,6 +5,7 @@ class CreateResponses < ActiveRecord::Migration
       t.float :quantity
       t.integer :question_id, null: false
       t.integer :survey_id, null: false
+      t.integer :multiplier_id
 
       t.timestamps null: false
     end
