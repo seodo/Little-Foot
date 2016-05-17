@@ -16,11 +16,11 @@
   <table id='worst-impact-item-table'>
     <tr>
      <td>The survey question was:</td>
-     <td><%=@survey.worst_question_carbon_offender.content %></td>
+     <td><%=@survey.worst_response_carbon_offender.question.content %></td>
     </tr>
     <tr>
      <td>Your answer: </td>
-     <td><%= @survey.worst_impact_item_carbon_offender.name %></td>
+     <td><%= @survey.worst_response_carbon_offender.impact_item.name %></td>
     </tr>
     <tr>
       <td>Quantity:</td>
@@ -28,18 +28,36 @@
     </tr>
     <tr>
       <td>Carbon amount:</td>
-      <td><%= @survey.worst_impact_item_carbon_offender.carbon %></td>
+      <td><%= @survey.worst_response_carbon_offender.impact_item.carbon %></td>
     </tr>
     <tr>
       <td>Total carbon footprint for this response:</td>
-      <td><%= (@survey.worst_impact_item_carbon_offender.carbon * @survey.worst_response_carbon_offender.quantity).round(2) %> pounds of CO2</td>
+      <td><%= (@survey.worst_response_carbon_offender.impact_item.carbon * @survey.worst_response_carbon_offender.quantity).round(2) %> pounds of CO2</td>
     </tr>
     <tr>
       <td>Tips for reducing:</td>
-      <td><%= @survey.worst_impact_item_carbon_offender.suggestion %></td>
+      <td><%= @survey.worst_response_carbon_offender.impact_item.suggestion %></td>
     </tr>
   </table>
-
 </ul>
+  <style>
+    #map {
+      width: 500px;
+      height: 400px;
+      margin: auto;
+    }
+  </style>
+
+  <input id='lat' type='hidden' value='<%=@survey.latitude%>'>
+  <input id='lng' type='hidden' value='<%=@survey.longitude%>'>
+
+  <input id='radius'>
+
+
+<div id="map"></div>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=ASK-PATRICK-FOR-KEY&callback=initMap"
+  type="text/javascript"></script>
 
 <%=link_to "Calculate Your Carbon Footprint", surveys_path, method: :post %>
+
+

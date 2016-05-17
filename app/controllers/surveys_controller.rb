@@ -17,16 +17,20 @@ class SurveysController < ApplicationController
   end
 
   def create
-
     if logged_in?
-      @survey = Survey.create(user_id: current_user.id)
-      @question = Question.find_by(id: 1)
+      @survey = Survey.create(survey_params)
+      @question = Question.first
       redirect_to survey_question_path(@survey, @question)
     else
-       @survey = Survey.create()
-        @question = Question.find_by(id: 1)
+       @survey = Survey.create(survey_params)
+        @question = Question.first
       redirect_to survey_question_path(@survey, @question)
    end
+  end
+
+  private
+  def survey_params
+    params.require(:survey).permit(:latitude, :longitude).merge(user: current_user)
   end
 
 end
