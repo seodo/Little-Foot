@@ -1,5 +1,34 @@
 $(document).ready(function () {
-$('#bar-container').highcharts({
+
+getUserData();
+// var chart = new Highcharts.chart(options);
+});
+
+
+var getUserData = function(){
+  $.ajax({
+    url: window.location.pathname,
+    dataType: "JSON"
+  }).done(function (response){
+    foodData = [];
+    transportationData = [];
+    lifestyleData = [];
+    createdAt = []
+    for(var i = 0; i < response.surveys.length; i++){
+      foodData[i] = response.surveys[i].food_category
+      transportationData[i] = response.surveys[i].transportation_category
+      lifestyleData[i] = response.surveys[i].lifestyle_category
+      createdAt[i] = response.surveys[i].created_at
+    }
+  }).then(function(response){
+      drawChart();
+  })
+
+};
+
+var drawChart = function(){
+
+  $('#bar-container').highcharts({
         chart: {
             type: 'column'
         },
@@ -7,20 +36,7 @@ $('#bar-container').highcharts({
             text: 'Past Emissions Results'
         },
         xAxis: {
-            categories: [
-                'Jan',
-                'Feb',
-                'Mar',
-                'Apr',
-                'May',
-                'Jun',
-                'Jul',
-                'Aug',
-                'Sep',
-                'Oct',
-                'Nov',
-                'Dec'
-            ],
+            categories: createdAt,
             crosshair: true
         },
         yAxis: {
@@ -32,7 +48,7 @@ $('#bar-container').highcharts({
         tooltip: {
             headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
             pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-                '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+                '<td style="padding:0"><b>{point.y:.1f} lb</b></td></tr>',
             footerFormat: '</table>',
             shared: true,
             useHTML: true
@@ -45,16 +61,15 @@ $('#bar-container').highcharts({
         },
         series: [{
             name: 'Food',
-            data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
-
+            data: foodData
         }, {
             name: 'Transportation',
-            data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2, 83.5, 106.6, 92.3]
-
+            data: transportationData
         }, {
             name: 'Lifestyle',
-            data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0, 59.6, 52.4, 65.2, 59.3, 51.2]
+            data: lifestyleData
 
         }]
     });
-});
+}
+
