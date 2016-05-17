@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="small-12 medium-12 columns">
+  <div class="small-6 columns">
     <nav class="top-bar">
       <ul class="breadcrumbs">
       <% if current_user %>
@@ -9,9 +9,16 @@
         <li class="name"><%= link_to "Log In", login_path %></li>
         <li class="name"><%= link_to "Register", new_user_path %></li>
       <%end%>
-        <li class="name"><%=link_to "Calculate Your Carbon Footprint", surveys_path, method: :post %></li>
         <li class="name"><%= link_to "Home", root_path %></li>
       </ul>
+    </div>
     </nav>
+
+    <div class="small-6 columns">
+        <%= form_for Survey.new do |f| %>
+        <%= f.hidden_field :latitude %>
+        <%= f.hidden_field :longitude %>
+        <%= f.submit "Calculate" "Your Carbon Footprint", class:"button nav-button" %>
+    <% end %>
   </div>
 </div>
