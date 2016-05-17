@@ -5,7 +5,6 @@ class Survey < ActiveRecord::Base
 
   def calculate_footprint
     footprint = self.responses.reduce(0) { |footprint, response| footprint + (response.quantity * response.impact_item.carbon) }
-
     footprint.round(2)
   end
 
