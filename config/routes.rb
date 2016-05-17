@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :users
 
-  resources :surveys, only: [:create, :show] do
+  resources :surveys, only: [:create, :show, :index] do
     resources :questions, only: [:show]
   end
 
