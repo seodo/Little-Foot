@@ -48,10 +48,7 @@ Question.create(content: "How many loads of laundry did you dry today?", identif
 Question.create(content: "How many hours of T.V. did you watch today?", identifier: "tv", category_id: lifestyle.id)
 
 # Question 10
-Question.create(content: "Approximately how many text messages did you send today?", identifier: "text_message", category_id: lifestyle.id)
-
-# Question 11
-Question.create(content: "Approximately how many emails did you send today?", identifier: "short_email", category_id: lifestyle.id)
+Question.create(content: "How many hours of air conditioning did you use?", identifier: "ac", category_id: lifestyle.id)
 
 ImpactItem.create(name:'beef' , carbon: 5.07, unit_size: '3 Ounces', suggestion: "Try switching to a food such as chicken or tuna which would reduce your carbon footprint to 1/3rd of this meal's impact. Better yet, switching to vegetables and grains would reduce impact by 1/10th!")
 ImpactItem.create(name:'lamb' , carbon: 12.17,unit_size: '5 Ounces', suggestion: "Try switching to a food such as chicken or tuna which would reduce your carbon footprint to 1/6th of this meal's impact. Better yet, switching to vegetables and grains would reduce impact by 1/24th!")
@@ -78,6 +75,12 @@ ImpactItem.create(name:'eat_out', carbon: 0, suggestion: '')
 # in lbs:
 ImpactItem.create( name: 'laundry_wash', carbon: 1.54, suggestion: 'Make sure to wash with cold water when possible.')
 ImpactItem.create( name: 'laundry_dry', carbon: 3.75, suggestion: 'Air dry your laundry to eleminate your carbon footprint for this activity all together!')
+
+# central air
+ImpactItem.create(name: 'ac_central_air', carbon: 4.65, suggestion: "Try limiting central air use to only the times you are home, or better yet, only the times you have guests over.")
+
+#window ac
+ImpactItem.create(name: 'ac_window', carbon: 1.96, suggestion: "Try limiting central air use to only the times you are home, or better yet, only the times you have guests over.")
 
 # hot shower. Carbon footprint in lbs per minute:
 ImpactItem.create( name: 'shower', carbon: 0.255, unit_size: '1 Minute', suggestion: 'Decrease time in the shower to reduce both carbon footprint and water consumption.')

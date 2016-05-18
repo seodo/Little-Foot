@@ -19,7 +19,7 @@
   <div class="small-7 columns life-box">
     <div class="life-box">
     <%if @question.identifier == "shower" %>
-      <%= number_field_tag 'shower', step: 0.01 %>
+      <%= number_field_tag 'shower', step: 0.1 %>
     <% elsif @question.identifier == "laundry_wash" %>
       <select name="laundry_wash">
         <option value="0">0</option>
@@ -44,10 +44,20 @@
         <option value="3">3</option>
         <option value="4">4</option>
       </select>
-    <% elsif @question.identifier == "text_message" %>
-      <%= number_field_tag 'text_message', step: 0.01 %>
-    <% elsif @question.identifier == "short_email" %>
-      <%= number_field_tag 'short_email', step: 0.01 %>
+    <% elsif @question.identifier == "ac" %>
+<div class="row">
+  <div class="small-7 columns">
+    <div class="trans-box">
+      Car:
+      <input name='ac_window' type='number' step="0.1">
+    </div>
+
+    <div class="trans-box">
+      Bus:
+      <input type='number' step="0.1" name='ac_central_air'>
+    </div>
+  </div>
+</div>
     <% end %>
     </div>
   </div>
