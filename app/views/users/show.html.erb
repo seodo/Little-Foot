@@ -4,7 +4,7 @@
   </div>
 </div>
 
-<div class="row">
+<div class="row id="top">
   <div class="small-3 columns">
     <%if current_user.surveys.present?%>
       <%if @user.surveys.last %>
@@ -17,20 +17,18 @@
   </div>
 
   <div class="small-6 columns avg-emission">
-    <h3>Average Carbon Emission:
-      <br>
+    <h3>Average Carbon Emission:<br>
       <%=@user.average_carbon_footprint%> pounds of CO2</h3>
   </div>
 </div>
 
 <div clas="row">
   <div class="small-7 columns">
-    <div id="bar-container">
-    </div>
+    <div id="bar-container"></div>
   </div>
 
-  <div class="small-5 columns">
-    <h3>Past Carbon Footprint results</h3>
+  <div class="small-3 columns">
+    <h3 id="list">Past Results:</h3>
     <ul>
       <% @user.surveys.each do |survey| %>
         <li>
@@ -39,10 +37,11 @@
         </li>
       <%end%>
     </ul>
-  <%end%>
-<% else %>
-  <h3>Hey <%=@user.full_name%>, you haven't taken any surveys yet!</h3>
-  <%end%>
-</div>
+    <%end%>
+    <% else %>
+      <h3>Hey <%=@user.full_name%>, you haven't taken any surveys yet!</h3>
+    <%end%>
+  </div>
+  <div class="small-3 columns"></div>
 </div>
 
