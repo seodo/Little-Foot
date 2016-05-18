@@ -145,6 +145,24 @@ h1 {
   width: 100%;
 }
 
+#color-codes {
+  margin: 3px 0px;
+  width: 42%;
+  font-size: 10px;
+  margin: 0 auto;
+}
+
+#color-codes tr td {
+  height: 10px;
+}
+
+.num {
+  width: 40px;
+}
+.color {
+  width: 5px;
+}
+
 #purple_map_marker {
   background-color: purple;
 }
@@ -165,6 +183,48 @@ h1 {
   background-color: red
 }
 
+
 #pie-table {
   width: 300px;
 }
+
+.register input {
+  background-color: #E2D9A6;
+}
+
+.register placeholder {
+  color: green;
+}
+
+.login input {
+
+  background-color: #E2D9A6;
+}
+
+#register {
+  float: left;
+  width: 100px;
+  margin: 20px;
+}
+
+.btn {
+  button-background: green;
+}
+
+#name {
+  width: 200px;
+}
+#map {
+  width: 500px;
+  height: 400px;
+  margin: auto;
+}
+
+.leader-table {
+  width: 100%;
+}
+
+.q {
+  width: 60%;
+}
+
