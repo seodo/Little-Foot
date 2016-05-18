@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    @top_ten_users = current_user.top_ten_users(@users)
     @last_survey = Survey.last
   end
 
