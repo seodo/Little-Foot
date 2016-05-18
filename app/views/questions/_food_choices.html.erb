@@ -1,15 +1,16 @@
 <div class="row">
-  <div class="small-2 columns">
-  <%= check_box_tag "dine_out" %>
-  <%= label_tag 'Did you eat out?' %>
+  <div class="small-12 columns">
+    <%= check_box_tag "dine_out" %>
+    <%= label_tag 'Did you eat out?' %>
   </div>
 </div>
 
-<div class="row">
+<div class="row food">
   <div class="small-2 columns">
     Eggs
     <br>
-    Serving Size: 1 Egg)
+    (Serving Size: 1 Egg)
+    <br>
     <select name="eggs">
       <option value="0">0</option>
       <option value="1">1</option>
@@ -17,12 +18,13 @@
       <option value="3">3</option>
       <option value="4">4</option>
     </select>
-    </div>
+  </div>
 
-    <div class="small-2 columns">
+  <div class="small-2 columns">
     Beef
     <br>
-    Serving Size: 3 Ounces)
+    (Serving Size: 3 Ounces)
+    <br>
     <select name="beef">
       <option value="0">0</option>
       <option value="1">1</option>
@@ -30,12 +32,13 @@
       <option value="3">3</option>
       <option value="4">4</option>
     </select>
-    </div>
+  </div>
 
-    <div class="small-2 columns">
+  <div class="small-2 columns">
     Lamb
     <br>
-    Serving Size: 5 Ounces)
+    (Serving Size: 5 Ounces)
+    <br>
     <select name="lamb">
       <option value="0">0</option>
       <option value="1">1</option>
@@ -43,12 +46,13 @@
       <option value="3">3</option>
       <option value="4">4</option>
     </select>
-    </div>
+  </div>
 
-    <div class="small-2 columns">
+  <div class="small-2 columns">
     Cheese
     <br>
-    Serving Size: 1.5 Ounces)
+    (Serving Size: 1.5 Ounces)
+    <br>
     <select name="cheese">
       <option value="0">0</option>
       <option value="1">1</option>
@@ -56,12 +60,13 @@
       <option value="3">3</option>
       <option value="4">4</option>
     </select>
-    </div>
+  </div>
 
   <div class="small-2 columns">
     Pork
     <br>
-    Serving Size: 3 Ounces)
+    (Serving Size: 3 Ounces)
+    <br>
     <select name="pork">
       <option value="0">0</option>
       <option value="1">1</option>
@@ -74,7 +79,8 @@
   <div class="small-2 columns">
     Turkey
     <br>
-    Serving Size: 4 Ounces)
+    (Serving Size: 4 Ounces)
+    <br>
     <select name="turkey">
       <option value="0">0</option>
       <option value="1">1</option>
@@ -85,11 +91,12 @@
   </div>
 </div>
 
-<div class="row">
+<div class="row food">
   <div class="small-2 columns">
     Chicken
     <br>
-    Serving Size: 4 Ounces)
+    (Serving Size: 4 Ounces)
+    <br>
     <select name="chicken">
       <option value="0">0</option>
       <option value="1">1</option>
@@ -102,7 +109,8 @@
   <div class="small-2 columns">
     Grains
     <br>
-    Serving Size: 3 Ounces )
+    (Serving Size: 3 Ounces)
+    <br>
     <select name="grains">
       <option value="0">0</option>
       <option value="1">1</option>
@@ -113,86 +121,93 @@
   </div>
 
   <div class="small-2 columns">
-Tuna
-<br>
-Serving Size: 2 Ounces/1 Can)
-<select name="tuna">
-  <option value="0">0</option>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-</select>
-</div>
-
-<div class="small-2 columns">
-Potatoes
-<br>
-6 Ounces or 1 Medium Potato)
-<select name="potatoes">
-  <option value="0">0</option>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-</select>
-</div>
-
-<div class="small-2 columns">
-Beans
-<br>
-Serving Size: 4 Ounces)
-<select name="beans">
-  <option value="0">0</option>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-</select>
-</div>
-
-<div class="small-2 columns">
-Milk
-<br>
-Serving Size: 8 Ounces)
-<select name="milk">
-  <option value="0">0</option>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-</select>
-</div>
-</div>
-
-<div class="row">
-  <div class="small-2 columns">
-Fruit
-<br>
-Serving Size: 3.5 Ounces)
-<select name="fruits">
-  <option value="0">0</option>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-</select>
-</div>
-
-<div class="small-2 columns">
-Vegetables
-<br>
-Serving Size: 3.5 Ounces)
-<select name="vegetables">
-  <option value="0">0</option>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-</div>
+    Tuna
+    <br>
+    (Serving Size: 2 Ounces/1 Can)
+    <br>
+    <select name="tuna">
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+  </div>
 
   <div class="small-2 columns">
-  <%= submit_tag 'Submit' %>
+    Potatoes
+    <br>
+    6 Ounces or 1 Medium Potato)
+    <br>
+    <select name="potatoes">
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+  </div>
+
+  <div class="small-2 columns">
+    Beans
+    <br>
+    (Serving Size: 4 Ounces)
+    <br>
+    <select name="beans">
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+  </div>
+
+  <div class="small-2 columns">
+    Milk
+    <br>
+    (Serving Size: 8 Ounces)
+    <br>
+    <select name="milk">
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+  </div>
+</div>
+
+<div class="row food">
+  <div class="small-2 columns">
+    Fruit
+    <br>
+    (Serving Size: 3.5 Ounces)
+    <br>
+    <select name="fruits">
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+  </div>
+
+  <div class="small-2 columns">
+    Vegetables
+    <br>
+    (Serving Size: 3.5 Ounces)
+    <br>
+    <select name="vegetables">
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+  </div>
+
+  <div class="small-2 columns">
+    <%= submit_tag 'Submit' %>
   </div>
 
   <div class="small-2 columns"></div>
