@@ -1,4 +1,4 @@
-<h1>End of Survey Results</h1>
+<h1>Survey Results</h1>
 
 <h2>Total Carbon Footprint:
   <span id='total-carbon'><%= @survey.calculate_footprint%></span> pounds of CO2</h2>
@@ -10,15 +10,15 @@
   </tr>
   <tr>
     <td>Food</td>
-    <td id='food-data'><%=@survey.calculate_footprint_by_category('food')%></td>
+    <td id='food-data'><%=@survey.calculate_footprint_by_category('food')%> lbs</td>
   </tr>
   <tr>
     <td>Transportation</td>
-    <td id='transportation-data'><%=@survey.calculate_footprint_by_category('transportation')%></td>
+    <td id='transportation-data'><%=@survey.calculate_footprint_by_category('transportation')%> lbs</td>
   </tr>
   <tr>
     <td>Lifestyle</td>
-    <td id='lifestyle-data'><%=@survey.calculate_footprint_by_category('lifestyle')%></td>
+    <td id='lifestyle-data'><%=@survey.calculate_footprint_by_category('lifestyle')%> lbs</td>
   </tr>
 </table>
 
@@ -58,6 +58,8 @@
     <% end %>
   </table>
 
+  <!-- <h3>How you stack up against the average American</h3> -->
+  <!-- average american carbon footprint daily: 109.5890 -->
 </ul>
 
 
