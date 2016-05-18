@@ -1,8 +1,13 @@
-body {
 
-  font-family: 'Fjalla One', sans-serif;
+body {
+  height: 100%;
+  padding-bottom: 100px;
 }
 
+#wrapper {
+  min-height: 100%;
+  position: relative;
+}
 
 body ul li {
   list-style-type: none;
@@ -32,11 +37,11 @@ h1 {
 
 .top-bar {
   border-bottom: 1px solid #C58E4D;
-  margin-left: 140px;
+  margin-left: 120px;
 }
 
 .breadcrumbs {
-  padding: 0px 55px;
+  padding: 0px 15px;
   margin: 0px;
 }
 
@@ -67,8 +72,39 @@ h1 {
   padding-left: 5px;
 }
 
-.fact {
+.trans-box {
+  display: inline-block;
+  width: 25%;
+  min-height: 100px;
+  clear: right;
+  float: left;
+  border-left: 4px solid;
+  margin-top: 20px;
+  padding: 10px 10px 0px;
+}
 
+.trans-box input {
+  width: 60px;
+  background-color: #E2D9A6;
+}
+
+.life-box {
+  margin: 0 auto;
+
+  width: 58%;
+}
+
+.life-box input {
+  width: 60px;
+  background-color: #E2D9A6;
+}
+
+.life-box select {
+  width: 60px;
+  height: 40px;
+}
+
+.fact {
   border-left: 1px solid;
 }
 
@@ -85,6 +121,10 @@ h1 {
   min-width: 170px;
 }
 
+.trans {
+  min-width: 280px;
+}
+
 .question-header h3 {
   font-size: 40px;
   float: right;
@@ -92,4 +132,16 @@ h1 {
 .question-check {
   clear: both;
   float: left;
+}
+
+#question-show {
+  padding-bottom: 100px;
+}
+
+#footer {
+  heigth: 100px;
+  color: #E2D9A6;
+  background-color: #4B3414;
+  position: absolute;
+  width: 100%;
 }

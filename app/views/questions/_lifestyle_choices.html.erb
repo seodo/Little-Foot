@@ -1,33 +1,62 @@
-<%if @question.identifier == "shower" %>
-  <%= number_field_tag 'shower', step: 0.01 %>
-<% elsif @question.identifier == "laundry_wash" %>
-  <select name="laundry_wash">
-    <option value="0">0</option>
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-  </select>
-<% elsif @question.identifier == "laundry_dry" %>
-  <select name="laundry_dry">
-    <option value="0">0</option>
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-  </select>
-<% elsif @question.identifier == "tv" %>
-  <select name="tv">
-    <option value="0">0</option>
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-  </select>
-<% elsif @question.identifier == "text_message" %>
-  <%= number_field_tag 'text_message', step: 0.01 %>
-<% elsif @question.identifier == "short_email" %>
-  <%= number_field_tag 'short_email', step: 0.01 %>
-<% end %>
+<div class="row">
+  <div class="small-4 columns question-header">
+    <h3>LIFESTYLE</h3>
+  </div>
+  <div class="small-1 columns space"></div>
+    <div class="small-6 columns submit">
+      <%= submit_tag 'Submit', class: "button" %>
+    </div>
+  <div class="small-1 columns"></div>
+</div>
 
-<%= submit_tag 'Submit' %>
+<div class="row">
+  <div class="small-7 columns question-check">
+    <%=label_tag @question.content %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-7 columns life-box">
+    <div class="life-box">
+    <%if @question.identifier == "shower" %>
+      <%= number_field_tag 'shower', step: 0.01 %>
+    <% elsif @question.identifier == "laundry_wash" %>
+      <select name="laundry_wash">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    <% elsif @question.identifier == "laundry_dry" %>
+      <select name="laundry_dry">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    <% elsif @question.identifier == "tv" %>
+      <select name="tv">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    <% elsif @question.identifier == "text_message" %>
+      <%= number_field_tag 'text_message', step: 0.01 %>
+    <% elsif @question.identifier == "short_email" %>
+      <%= number_field_tag 'short_email', step: 0.01 %>
+    <% end %>
+    </div>
+  </div>
+
+  <div class="small-4 columns fact">
+    <h3>FUN FACT!</h3>
+    <p>
+      <%=@lifefacts.sample.content%>
+    </p>
+  </div>
+  <div class="small-1 small-uncentered columns"></div>
+</div>
