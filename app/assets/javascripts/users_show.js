@@ -54,11 +54,28 @@ function getPoints() {
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });
 
+
+    for (var i = 0; i < points.length; i++) {
+      if (points[i][3] >= 0 && points[i][3] <= 40) {
+        points[i][3] = '/images/markers/purple_MarkerP.png';
+      } else if (points[i][3] >= 41 && points[i][3] <= 60) {
+        points[i][3] = '/images/markers/blue_MarkerB.png';
+      } else if (points[i][3] >= 61 && points[i][3] <= 80) {
+        points[i][3] = '/images/markers/green_MarkerG.png';
+      } else if (points[i][3] >= 81 && points[i][3] <= 100) {
+        points[i][3] = '/images/markers/yellow_MarkerY.png';
+      } else if (points[i][3] >= 101 && points[i][3] <= 120) {
+        points[i][3] = '/images/markers/orange_MarkerO.png';
+      } else if (points[i][3] >= 121) {
+        points[i][3] = '/images/markers/red_MarkerR.png';
+      };
+    };
+
     for (var i = 0; i < points.length; i++) {
       var marker = new google.maps.Marker({
         position: new google.maps.LatLng(points[i][1], points[i][2]),
         map: mapAllPoints,
-        title: toString(points[i][3]),
+        icon: points[i][3],
         visible: true
       });
     }
