@@ -58,12 +58,26 @@ h1 {
 
 .food-box {
   dipsplay: inline-block;
-  width: 22%;
-  min-height: 100px;
+  width: 25%;
+  min-height: 130px;
+  clear: right;
   float: left;
-  border-left: 1px solid;
-
-  margin-top: 15px;
+  border-left: 4px solid;
+  margin-top: 20px;
   padding-left: 5px;
+}
+
+.fact {
+
+  border-left: 1px solid;
+}
+
+.fact h3 {
+  color: #978D4F;
+  border-bottom: 1px solid;
+  padding-left: 3px;
+}
+.fact p {
+  font-size: 30px;
 }
 

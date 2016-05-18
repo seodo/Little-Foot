@@ -10,7 +10,7 @@
 </div>
 
 <div class="row food">
-  <div class="small-8 columns">
+  <div class="small-7 columns">
     <div class="food-box">
       Eggs<br>(Serving Size: 1 Egg)<br>
       <select name="eggs">
@@ -54,17 +54,8 @@
         <option value="4">4</option>
       </select>
     </div>
-  </div>
 
-  <div class="small-4 columns fact">
-    <p>
-      RANDOM FACT PLACE
-    </p>
-  </div>
-</div>
 
-<div class="row food">
-  <div class="small-8 columns">
     <div class="food-box">
     Pork<br>(Serving Size: 3 Ounces)<br>
       <select name="pork">
@@ -108,11 +99,7 @@
         <option value="4">4</option>
       </select>
     </div>
-  </div>
-</div>
 
-<div class="row food">
-  <div class="small-8 columns">
     <div class="food-box">
     Tuna<br>(Serving Size: 2 Ounces/1 Can)<br>
       <select name="tuna">
@@ -156,11 +143,8 @@
         <option value="4">4</option>
       </select>
     </div>
-  </div>
-</div>
 
-<div class="row food">
-  <div class="small-8 columns">
+
     <div class="food-box">
     Fruit<br>(Serving Size: 3.5 Ounces)<br>
       <select name="fruits">
@@ -183,7 +167,16 @@
       </select>
     </div>
   </div>
+
+  <div class="small-4 small-uncentered columns fact">
+    <h3>FUN FACT!</h3>
+    <p>
+      <%=@foodfacts.sample.content%>
+    </p>
+  </div>
+  <div class="small-1 small-uncentered columns"></div>
 </div>
+
 
 
 
