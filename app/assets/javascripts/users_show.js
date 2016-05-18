@@ -57,9 +57,11 @@ function getPoints() {
     for (var i = 0; i < points.length; i++) {
       var marker = new google.maps.Marker({
         position: new google.maps.LatLng(points[i][1], points[i][2]),
-        map: mapAllPoints
+        map: mapAllPoints,
+        title: toString(points[i][3]),
+        visible: true
       });
-
+debugger
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
         return function() {
           infowindow.setContent(points[i][3]);

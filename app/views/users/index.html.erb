@@ -10,3 +10,19 @@
 
   </ul>
 <%end%>
+
+<style>
+    #map {
+      width: 500px;
+      height: 400px;
+      margin: auto;
+    }
+  </style>
+
+  <input id='lat' type='hidden' value='<%=@last_survey.latitude%>'>
+  <input id='lng' type='hidden' value='<%=@last_survey.longitude%>'>
+
+
+<div id="map"></div>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=ASKPATRICKFORKEY&callback=initMap"
+  type="text/javascript"></script>
