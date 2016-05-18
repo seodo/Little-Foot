@@ -15,11 +15,17 @@ class User < ActiveRecord::Base
 
   def average_carbon_footprint
     sum_footprint = 0
-    self.surveys.each do |survey|
-      sum_footprint += survey.calculate_footprint
+    if self.surveys.any?
+      self.surveys.each do |survey|
+        sum_footprint += survey.calculate_footprint
+      end
+        return footprint_average = (sum_footprint/self.surveys.count).round(2)
+    else
+      return 0
     end
-    footprint_average = (sum_footprint/self.surveys.count).round(2)
   end
 
-
+  def top_ten_users(users)
+    users.sort_by { |user| user.average_carbon_footprint }[0...10]
+  end
 end
