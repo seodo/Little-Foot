@@ -1,15 +1,35 @@
-<h1>Welcome, <%=@user.full_name%></h1>
-<%if current_user.surveys.present?%>
-  <%if @user.surveys.last %>
-    <h2>Your last survey was taken on <%= format_date(@user.surveys.last.created_at)%><br>
-      Score: <%=@user.surveys.last.calculate_footprint%> pounds of CO2</h2>
+<div class="row">
+  <div class="small-12 small-centered columns">
+    <h1>Welcome, <%=@user.full_name%></h1>
+  </div>
+</div>
 
-    <h2>Your average carbon emissions is <%=@user.average_carbon_footprint%> pounds of CO2 a day.</h2>
+<div class="row">
+  <div class="small-3 columns">
+    <%if current_user.surveys.present?%>
+      <%if @user.surveys.last %>
+      <h3>Last Survey Taken:</h3>
+    </div>
 
-    <div id="bar-container" style="width:100%; height:400px;"></div>
+    <div class="small-3 columns">
+      <%= format_date(@user.surveys.last.created_at)%>
+      <h3><%=@user.surveys.last.calculate_footprint%> pounds of CO2</h3>
+  </div>
 
+  <div class="small-6 columns avg-emission">
+    <h3>Average Carbon Emission:
+      <br>
+      <%=@user.average_carbon_footprint%> pounds of CO2</h3>
+  </div>
+</div>
 
+<div clas="row">
+  <div class="small-7 columns">
+    <div id="bar-container">
+    </div>
+  </div>
 
+  <div class="small-5 columns">
     <h3>Past Carbon Footprint results</h3>
     <ul>
       <% @user.surveys.each do |survey| %>
@@ -18,12 +38,11 @@
           <%=survey.calculate_footprint%> pounds of CO2
         </li>
       <%end%>
-
-
     </ul>
   <%end%>
 <% else %>
   <h3>Hey <%=@user.full_name%>, you haven't taken any surveys yet!</h3>
   <%end%>
-
+</div>
+</div>
 
