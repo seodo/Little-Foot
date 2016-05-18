@@ -6,7 +6,6 @@ class ResponsesController < ApplicationController
     @question = Question.find_by(id: params[:question_id].to_i)
     dine_out_multiplyer = 1
     if params[:dine_out]
-      #could not figure out how to add this in the reduce final survey results
       dine_out_multiplyer = 3.67
       @multiplier = Multiplier.create(name: "dine out meal", value: 3.67, suggestion: "Try eating at home for high impact carbon items to lower your footprint!")
     end
