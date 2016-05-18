@@ -50,15 +50,15 @@ Question.create(content: "How many hours of T.V. did you watch today?", identifi
 # Question 10
 Question.create(content: "How many hours of air conditioning did you use?", identifier: "ac", category_id: lifestyle.id)
 
-ImpactItem.create(name:'beef' , carbon: 5.07, unit_size: '3 Ounces', suggestion: "Try switching to a food such as chicken or tuna which would reduce your carbon footprint to 1/3rd of this meal's impact. Better yet, switching to vegetables and grains would reduce impact by 1/10th!")
-ImpactItem.create(name:'lamb' , carbon: 12.17,unit_size: '5 Ounces', suggestion: "Try switching to a food such as chicken or tuna which would reduce your carbon footprint to 1/6th of this meal's impact. Better yet, switching to vegetables and grains would reduce impact by 1/24th!")
+ImpactItem.create(name:'beef' , carbon: 5.07, unit_size: '3 Ounces', suggestion: "Try switching to a food such as chicken or tuna to cut a quater of emissions. Going vegetarian or vegan would cut emissions even further!")
+ImpactItem.create(name:'lamb' , carbon: 12.17,unit_size: '5 Ounces', suggestion: "Try switching to a food such as chicken or tuna which would reduce your carbon footprint to 1/6th of this meal's impact.")
 ImpactItem.create(name:'cheese' , carbon: 1.26, unit_size: '1.5 Ounces', suggestion: "Try limiting the amount of cheese you consume, use replacements flavoring - salt and spices are an easy way to make an average meal delicious!")
-ImpactItem.create(name:'pork' , carbon: 2.27, unit_size: '3 Ounces', suggestion: "Try switching to grains/beans to lower your carbon footprint to 1/4th of an impact.")
+ImpactItem.create(name:'pork' , carbon: 2.27, unit_size: '3 Ounces', suggestion: "Try switching to grains/beans which produce about 75% less than pork.")
 ImpactItem.create(name:'turkey' , carbon: 2.73, unit_size: '4 Ounces', suggestion: "Try switching to grains/beans to lower your carbon footprint to 1/4th of an impact.")
-ImpactItem.create(name:'chicken' , carbon: 1.72, unit_size: '4 Ounces', suggestion: "Try switching to grains/beans to lower your carbon footprint to 1/4th of an impact.")
-ImpactItem.create(name:'tuna' , carbon: 0.77, unit_size: '2 Ounces', suggestion: "Try switching to grains/beans to lower your carbon footprint to 1/3rd of an impact.")
+ImpactItem.create(name:'chicken' , carbon: 1.72, unit_size: '4 Ounces', suggestion: "Try switching to grains/beans which produce about 75% less than chicken.")
+ImpactItem.create(name:'tuna' , carbon: 0.77, unit_size: '2 Ounces', suggestion: "Try switching to grains/beans to lower your carbon footprint.")
 ImpactItem.create(name:'eggs' , carbon: 0.73, unit_size: '1 Egg', suggestion: "Try eating fewer eggs to lower your carbon footprint!")
-ImpactItem.create(name:'potatoes' , carbon: 1.10, unit_size: '6 Ounces or 1 Medium Potato', suggestion: "Surprisingly potatoes have about twice the impact as grains or bread. Switch to these food options lower your impact!")
+ImpactItem.create(name:'potatoes' , carbon: 1.10, unit_size: '6 Ounces or 1 Medium Potato', suggestion: "Surprisingly potatoes have about twice the impact as grains or bread. Switch to these food options to lower your impact!")
 ImpactItem.create(name:'grains' , carbon: 0.51, unit_size: '3 Ounces', suggestion: '')
 ImpactItem.create(name:'beans' , carbon: 0.49, unit_size: '4 Ounces', suggestion: '')
 ImpactItem.create(name:'milk' , carbon: 0.95, unit_size: '8 Ounces', suggestion: 'Try switching to rice milk to lower your carbon footprint!')
@@ -74,7 +74,7 @@ ImpactItem.create(name:'eat_out', carbon: 0, suggestion: '')
 
 # in lbs:
 ImpactItem.create( name: 'laundry_wash', carbon: 1.54, suggestion: 'Make sure to wash with cold water when possible.')
-ImpactItem.create( name: 'laundry_dry', carbon: 3.75, suggestion: 'Air dry your laundry to eleminate your carbon footprint for this activity all together!')
+ImpactItem.create( name: 'laundry_dry', carbon: 3.75, suggestion: 'Air dry your laundry to eleminate your carbon footprint for this activity altogether!')
 
 # central air
 ImpactItem.create(name: 'ac_central_air', carbon: 4.65, suggestion: "Try limiting central air use to only the times you are home, or better yet, only the times you have guests over.")
