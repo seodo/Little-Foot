@@ -45,19 +45,16 @@
         <option value="4">4</option>
       </select>
     <% elsif @question.identifier == "ac" %>
-<div class="row">
-  <div class="small-7 columns">
-    <div class="trans-box">
-      Car:
-      <input name='ac_window' type='number' step="0.1">
-    </div>
+      <div class="trans-box">
+        Window AC:
+        <input name='ac_window' type='number' step="0.1">
+      </div>
 
-    <div class="trans-box">
-      Bus:
+      <div class="trans-box">
+        Central Air:
       <input type='number' step="0.1" name='ac_central_air'>
     </div>
-  </div>
-</div>
+
     <% end %>
     </div>
   </div>

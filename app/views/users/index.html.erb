@@ -1,67 +1,65 @@
+<div class="row">
+  <div class="small-12 small-centered columns">
+    <h2>See how you stack up against the top 10!</h2>
+  </div>
+</div>
 
-<h2>See how you stack up against the top 10!</h2>
-<% @top_ten_users.each do |user| %>
-  
-    <table>
+<div class="row">
+  <div class="small-5 columns">
+    <% @top_ten_users.each do |user| %>
+    <table class="leader-table">
       <tr>
-        <td>Name:</td>
-        <td><%= link_to user.full_name, user_path(user) %></td>
+        <td id="name" colspan="2"><%= link_to user.full_name, user_path(user) %></td>
       </tr>
-  <% if user.surveys.present?%>
-      <tr>
-        <td>Average Carbon Footprint in pounds of CO2: </td>
-        <td><%= user.average_carbon_footprint%></td>
-      </tr>
-      <tr>
-        <td>Last Carbon footprint calculated on: </td>
-        <td><%= user.surveys.last.created_at %></td>
-      </tr>
-      <tr>
-        <td>Amount in pounds of CO2: </td>
-        <td><%= user.surveys.last.calculate_footprint %></td>
-      </tr>
-  <%else%>
-      <tr>
-        <td colspan="2" >No carbon footprints calculated yet</td>
-      </tr>
-  <%end%>
-  </table>
-<%end%>
+      <% if user.surveys.present?%>
+        <tr>
+          <td class="q">Average Carbon Footprint in pounds of CO2: </td>
+          <td><%= user.average_carbon_footprint%></td>
+        </tr>
+        <tr>
+          <td  class="q">Last Carbon footprint calculated on: </td>
+          <td><%= user.surveys.last.created_at %></td>
+        </tr>
+        <tr>
+          <td  class="q">Amount in pounds of CO2: </td>
+          <td><%= user.surveys.last.calculate_footprint %></td>
+        </tr>
+      <%else%>
+        <tr>
+          <td  class="q">No carbon footprints calculated yet</td>
+        </tr>
+      <%end%>
+    </table>
+    <%end%>
+  </div>
 
-<style>
-    #map {
-      width: 500px;
-      height: 400px;
-      margin: auto;
-    }
-</style>
+  <div class="small-7 columns">
+<div id="map"></div>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAX6GNayJV3odwNes9YMg_Jjs_SxyDSHD0&callback=initMap"
+  type="text/javascript"></script>
+</div>
+<!-- <h3>Map point ledgend color references pounds of CO2</h3> -->
+<table id="color-codes">
+  <tr>
+    <td class="num">under 40</td><td id="purple_map_marker" class="color"></td>
+    <td class="num">40-60</td><td id="blue_map_marker" class="color"></td>
+    <td class="num">60-80</td><td id="green_map_marker" class="color"></td>
+    <td class="num">80-100</td><td id="yellow_map_marker" class="color"></td>
+    <td class="num">100-120</td><td id="orange_map_marker" class="color"></td>
+    <td class="num">over 120</td><td id="red_map_marker" class="color"></td>
+  </tr>
+  <tr>
+    <td colspan="12">measured in lbs/CO2</td>
+  </tr>
+</table>
+</div>
+
 <%if @last_survey%>
   <input id='lat' type='hidden' value='<%=@last_survey.latitude%>'>
   <input id='lng' type='hidden' value='<%=@last_survey.longitude%>'>
 <%end%>
 
 
-<div id="map"></div>
-<h3>Map point ledgend color references pounds of CO2</h3>
-<table>
-  <tr>
-    <td>Less than 40 lb/CO2</td><td id="purple_map_marker"></td>
-  </tr>
-  <tr>
-    <td>between 40 and 60 lb/CO2</td><td id="blue_map_marker"></td>
-  </tr>
-    <tr>
-    <td>between 60 and 80 lb/CO2</td><td id="green_map_marker"></td>
-  </tr>
-    <tr>
-    <td>between 80 and 100 lb/CO2</td><td id="yellow_map_marker"></td>
-  </tr>
-    <tr>
-    <td>between 100 and 120 lb/CO2</td><td id="orange_map_marker"></td>
-  </tr>
-    <tr>
-    <td>120 or over lb/CO2</td><td id="red_map_marker"></td>
-  </tr>
-</table>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAX6GNayJV3odwNes9YMg_Jjs_SxyDSHD0&callback=initMap"
-  type="text/javascript"></script>
+<!-- <div id="map"></div> -->
+
+

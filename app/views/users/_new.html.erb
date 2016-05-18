@@ -1,5 +1,5 @@
 <%= form_tag(users_path, method: 'post') do %>
-  <div class="row">
+  <div class="row register">
     <div class="small-3 columns">
       <%= label_tag :full_name %><br />
       <%= text_field_tag "user[full_name]", nil, placeholder: "Full Name" %>
@@ -7,7 +7,7 @@
 
     <div class="small-3 columns">
       <%= label_tag 'Upload photo' %><br />
-      <%= file_field_tag "user[image_url]" %>
+      <%= file_field_tag "user[image]" %>
     </div>
 
     <div class="small-3 columns">
@@ -21,8 +21,8 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="small-4 columns">
+  <div class="row register">
+    <div class="small-4 columns register">
       <%= label_tag :bio %><br/>
       <%= text_area_tag 'user[bio]', nil, placeholder: "Bio" %>
     </div>
@@ -37,13 +37,9 @@
       <%= text_field_tag 'user[state]', nil, placeholder: "__" %>
     </div>
 
-        <div class="small-5 columns">
+    <div class="small-5 columns" id="register">
+      <%= submit_tag('Register', class: "btn") %>
     </div>
   </div>
 
-  <div class="row">
-    <div class="small-3 columns">
-      <%= submit_tag('Register', :class => "btn btn-warning") %>
-    </div>
-  </div>
 <% end %>
