@@ -23,14 +23,20 @@
 </div>
 
 <% if @question.category_id == food_category %>
+<div>
+  <p>Fun Fact</p>
+  <%=@foodfacts.sample.content%>
+</div>
     <%= render 'food_choices' %>
 <%end%>
 
 <% if @question.category_id == transportation_category %>
+<div><%=@transfacts.sample.content%></div>
     <%= render 'transportation_choices' %>
 <%end%>
 
 <% if @question.category_id == lifestyle_category %>
+<div><%=@lifefacts.sample.content%></div>
     <div class="row">
       <div class="medium-3">
     <%= render 'lifestyle_choices' %>
