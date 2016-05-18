@@ -22,17 +22,17 @@ lifestyle = Category.create(title: "Lifestyle")
 
 # Food
 # Question 1
-Question.create(content: "What did you have for breakfast? Specify the quantity for each item.", category_id: food.id)
+Question.create(content: "What did you have for breakfast? Specify the quantity for each item.", identifier: "breakfast", category_id: food.id)
 
 # Question 2
-Question.create(content: "What did you have for lunch? Specify the quantity for each item.", category_id: food.id)
+Question.create(content: "What did you have for lunch? Specify the quantity for each item.", identifier: "lunch", category_id: food.id)
 
 # Question 3
-Question.create(content: "What did you have for dinner? Specify the quantity for each item.", category_id: food.id)
+Question.create(content: "What did you have for dinner? Specify the quantity for each item.", identifier: "dinner", category_id: food.id)
 
 # Transportation
 # Question 5
-Question.create(content: "Which mode of transportation did you use to commute today? How many miles for each did you travel.", category_id: transportation.id)
+Question.create(content: "Which mode of transportation did you use to commute today? How many miles for each did you travel.", identifier: "transport", category_id: transportation.id)
 
 # Lifestyle
 # Question 6

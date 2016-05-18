@@ -81,3 +81,15 @@ h1 {
   font-size: 30px;
 }
 
+.question-header {
+  min-width: 170px;
+}
+
+.question-header h3 {
+  font-size: 40px;
+  float: right;
+}
+.question-check {
+  clear: both;
+  float: left;
+}
