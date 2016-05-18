@@ -3,12 +3,13 @@ html {
 }
 body {
   min-height: 100%;
-  margin-bottom: 100px;
+
 }
 
 #wrapper {
   min-height: 100%;
   position: relative;
+  padding-bottom: 100px;
 }
 
 body ul li {
@@ -140,12 +141,15 @@ h1 {
 }
 
 #footer {
-  heigth: 200px;
+  padding: 30px;
+  heigth: 100px;
   color: #E2D9A6;
   background-color: #4B3414;
   position: absolute;
   bottom: 0px;
   width: 100%;
+  text-align: center;
+  border-radius: 10px;
 }
 
 #color-codes {
