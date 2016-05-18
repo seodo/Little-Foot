@@ -26,6 +26,7 @@ class SurveysController < ApplicationController
       @question = Question.first
       redirect_to survey_question_path(@survey, @question)
     else
+
        @survey = Survey.create(survey_params)
         @question = Question.first
       redirect_to survey_question_path(@survey, @question)
