@@ -11,7 +11,7 @@ class ResponsesController < ApplicationController
       @multiplier = Multiplier.create(name: "dine out meal", value: 3.67, suggestion: "Try eating at home for high impact carbon items to lower your footprint!")
     end
       params.each do |key, value|
-        if ImpactItem.find_by(name: key) && value.to_i > 0
+        if ImpactItem.find_by(name: key)
           impact_item = ImpactItem.find_by(name: key)
           Response.create(question_id: @question.id, survey_id: @survey.id, impact_item_id: impact_item.id, quantity: value.to_i * dine_out_multiplyer, multiplier: @multiplier)
         end
