@@ -57,6 +57,7 @@ $foundation-palette: (
 );
 $honey: #E7DFAE;
 $green: #978D4F;
+$light-green: #DAD7B0;
 $chocolate: #4B3414;
 $brown: #C58E4D;
 $ivory: #E2D9A6;
@@ -498,7 +499,7 @@ $switch-paddle-transition: all 0.25s ease-out;
 // 31. Table
 // ---------
 
-$table-background: $white;
+$table-background: $light-green;
 $table-color-scale: 5%;
 $table-border: 1px solid smart-scale($table-background, $table-color-scale);
 $table-padding: rem-calc(8 10 10);
