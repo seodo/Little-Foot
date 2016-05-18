@@ -1,8 +1,7 @@
 <div class="row">
   <div class="medium-10 columns"></div>
-<h2>Calculate your carbon footprint!</h2>
 </div>
-</div>
+
 
 <% food_category = 1 %>
 <% transportation_category = 2 %>
@@ -15,7 +14,7 @@
 <div class="row">
   <div class="medium-10 columns"></div>
 <%=form_tag '/responses' %>
-<%=label_tag @question.content %>
+
 <%=hidden_field_tag 'survey_id', @survey.id %>
 <%=hidden_field_tag 'question_id', @question.id %>
 <div class="medium-2 columns">
@@ -23,12 +22,10 @@
 </div>
 
 <% if @question.category_id == food_category %>
-
     <%= render 'food_choices' %>
 <%end%>
 
 <% if @question.category_id == transportation_category %>
-<div><%=@transfacts.sample.content%></div>
     <%= render 'transportation_choices' %>
 <%end%>
 
