@@ -1,21 +1,27 @@
 <div class="row">
-  <div class="small-5 columns">
-    <% if @question.id == 1 %>
+  <div class="small-3 columns question-header">
+    <% if @question.identifier == "breakfast" %>
       <h3>Breakfast</h3>
-    <% elsif @question.id == 2 %>
+    <% elsif @question.identifier == "lunch" %>
       <h3>Lunch</h3>
-    <% elsif @question.id == 3 %>
+    <% elsif @question.identifier == "dinner" %>
       <h3>Dinner</h3>
     <% end %>
-    <%=label_tag @question.content %>
-    <%= check_box_tag "dine_out" %>
-    <%= label_tag 'Did you eat out?' %>
-  </div>
+    </div>
+  <div class="small-2 columns space"></div>
   <div class="small-6 columns submit">
     <%= submit_tag 'Submit', class: "button" %>
   </div>
   <div class="small-1 columns"></div>
 </div>
+
+<div class="row">
+    <div class="small-7 columns question-check">
+      <%=label_tag @question.content %>
+      <%= check_box_tag "dine_out" %>
+      <%= label_tag 'Did you eat out?' %>
+    </div>
+  </div>
 
 <div class="row food">
   <div class="small-7 columns">

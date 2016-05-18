@@ -77,7 +77,7 @@ ActiveRecord::Schema.define(version: 20160517020903) do
     t.string   "full_name",       null: false
     t.string   "email",           null: false
     t.string   "password_digest", null: false
-    t.string   "image_url"
+    t.string   "image"
     t.text     "bio"
     t.string   "city"
     t.string   "state"
