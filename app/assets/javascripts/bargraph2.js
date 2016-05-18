@@ -256,7 +256,7 @@ $('#bargraph2-container').highcharts({
         },
         series: [{
             name: 'Emissions per Day',
-            data: [parseFloat($('#total-carbon').html()), 110, 22 ]
+            data: [parseFloat($('#total-carbon').html()), 120, 24 ]
         }]
     });
 
