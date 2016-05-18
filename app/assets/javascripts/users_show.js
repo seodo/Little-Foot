@@ -61,13 +61,6 @@ function getPoints() {
         title: toString(points[i][3]),
         visible: true
       });
-debugger
-      google.maps.event.addListener(marker, 'click', (function(marker, i) {
-        return function() {
-          infowindow.setContent(points[i][3]);
-          infowindow.open(map, marker);
-        }
-      })(marker, i));
     }
   });
 };

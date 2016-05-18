@@ -38,7 +38,11 @@
     </tr>
     <tr>
       <td>Quantity:</td>
-      <td><%= (@survey.worst_response_carbon_offender.quantity)/(@survey.worst_response_carbon_offender.multiplier.value) %></td>
+        <%if @survey.worst_response_carbon_offender.multiplier %>
+          <td><%= (@survey.worst_response_carbon_offender.quantity)/(@survey.worst_response_carbon_offender.multiplier.value) %></td>
+        <%else%>
+          <td><%= @survey.worst_response_carbon_offender.quantity %></td>
+        <%end%>
     </tr>
     <tr>
       <td>Carbon amount:</td>
