@@ -15,6 +15,270 @@ Question.destroy_all
 User.create(full_name: "Patrick Swayze", email: "hello@email.com", password: "12345678")
 User.create(full_name: "Julia Roberts", email: "hey@email.com", password: "12345678")
 User.create(full_name: "Johnny Depp", email: "hi@email.com", password: "12345678")
+User.create(full_name: "Reel Persun", email: "reel@email.com", password: "12345678")
+User.create(full_name: "Bob Builder", email: "bob@email.com", password: "12345678")
+User.create(full_name: "Heh Lo", email: 'he@email.com', password: "12345678")
+User.create(full_name: "Joe John", email: 'joe@email.com', password: "12345678")
+User.create(full_name: 'Cindy Sin', email: 'cindy@email.com', password:'12345678')
+User.create(full_name: 'Jack Clark', email: 'jack@email.com', password: '12345678')
+User.create(full_name: 'Leo DeCaprius', email: 'leo@email.com', password: '12345678')
+User.create(full_name: 'Shane Dwayne', email: 'shane@email.com', password: '12345678')
+
+Survey.create(user_id: 1, latitude: 34.050962, longitude: -118.249148)
+Survey.create(user_id: 2, latitude: 41.983676, longitude: -109.952637)
+Survey.create(user_id: 3, latitude: 33.785140, longitude: -99.058129)
+Survey.create(user_id: 4, latitude: 42.136978, longitude: -83.909415)
+Survey.create(user_id: 5, latitude: 35.856430, longitude: -86.403156)
+Survey.create(user_id: 6, latitude: 37.495448, longitude: -77.488656)
+Survey.create(user_id: 7, latitude: 45.459141, longitude: -68.894770)
+Survey.create(user_id: 8, latitude: 51.481779, longitude: -107.475895)
+Survey.create(user_id: 9, latitude: 44.074537, longitude: 112.694941)
+Survey.create(user_id: 10, latitude: 35.065000, longitude: -105.881586)
+Survey.create(user_id: 11, latitude: 39.653082, longitude: -109.012185)
+
+
+Response.create(impact_item_id: 1, quantity: 3.0, question_id: 1, survey_id: 1, multiplier_id: 1)
+Response.create(impact_item_id: 8, quantity: 1.0, question_id: 1, survey_id: 1, multiplier_id: 1)
+Response.create(impact_item_id: 2, quantity: 3.0, question_id: 1, survey_id: 1, multiplier_id: 1)
+Response.create(impact_item_id: 6, quantity: 11.01, question_id: 1, survey_id: 1, multiplier_id: 1)
+Response.create(impact_item_id: 7, quantity: 11.01, question_id: 1, survey_id: 1, multiplier_id: 1)
+Response.create(impact_item_id: 8, quantity: 2.0, question_id: 2, survey_id: 1, multiplier_id: 1)
+Response.create(impact_item_id: 5, quantity: 3.0, question_id: 2, survey_id: 1, multiplier_id: 1)
+Response.create(impact_item_id: 11, quantity: 3.0, question_id: 2, survey_id: 1, multiplier_id: 1)
+Response.create(impact_item_id: 2, quantity: 3.0, question_id: 1, survey_id: 1, multiplier_id: 1)
+Response.create(impact_item_id: 2, quantity: 3.0, question_id: 3, survey_id: 1, multiplier_id: 1)
+Response.create(impact_item_id: 10, quantity: 2.0, question_id: 3, survey_id: 1, multiplier_id: 1)
+Response.create(impact_item_id: 9, quantity: 2.0, question_id: 3, survey_id: 1)
+Response.create(impact_item_id: 13, quantity: 10.0, question_id: 4, survey_id: 1)
+Response.create(impact_item_id: 17, quantity: 10.0, question_id: 4, survey_id: 1)
+Response.create(impact_item_id: 24, quantity: 30.0, question_id: 5, survey_id: 1)
+Response.create(impact_item_id: 20, quantity: 2.0, question_id: 6, survey_id: 1)
+Response.create(impact_item_id: 21, quantity: 2.0, question_id: 7, survey_id: 1)
+Response.create(impact_item_id: 25, quantity: 2.0, question_id: 8, survey_id: 1)
+Response.create(impact_item_id: 23, quantity: 3.0, question_id: 9, survey_id: 1)
+
+
+Response.create(impact_item_id: 1, quantity: 3.0, question_id: 1, survey_id: 2, multiplier_id: 1)
+Response.create(impact_item_id: 8, quantity: 5.0, question_id: 1, survey_id: 2, multiplier_id: 1)
+Response.create(impact_item_id: 2, quantity: 3.0, question_id: 1, survey_id: 2, multiplier_id: 1)
+Response.create(impact_item_id: 6, quantity: 11.01, question_id: 1, survey_id: 2, multiplier_id: 1)
+Response.create(impact_item_id: 7, quantity: 11.01, question_id: 1, survey_id: 2, multiplier_id: 1)
+Response.create(impact_item_id: 8, quantity: 2.0, question_id: 2, survey_id: 2, multiplier_id: 1)
+Response.create(impact_item_id: 5, quantity: 3.0, question_id: 2, survey_id: 2, multiplier_id: 1)
+Response.create(impact_item_id: 11, quantity: 3.0, question_id: 2, survey_id: 2, multiplier_id: 1)
+Response.create(impact_item_id: 2, quantity: 5.0, question_id: 1, survey_id: 2, multiplier_id: 1)
+Response.create(impact_item_id: 2, quantity: 3.0, question_id: 3, survey_id: 2, multiplier_id: 1)
+Response.create(impact_item_id: 10, quantity: 2.0, question_id: 3, survey_id: 2, multiplier_id: 1)
+Response.create(impact_item_id: 9, quantity: 2.0, question_id: 3, survey_id: 2)
+Response.create(impact_item_id: 13, quantity: 20.0, question_id: 4, survey_id: 2)
+Response.create(impact_item_id: 17, quantity: 10.0, question_id: 4, survey_id: 2)
+Response.create(impact_item_id: 24, quantity: 30.0, question_id: 5, survey_id: 2)
+Response.create(impact_item_id: 20, quantity: 2.0, question_id: 6, survey_id: 2)
+Response.create(impact_item_id: 21, quantity: 5.0, question_id: 7, survey_id: 2)
+Response.create(impact_item_id: 25, quantity: 2.0, question_id: 8, survey_id: 2)
+Response.create(impact_item_id: 23, quantity: 3.0, question_id: 9, survey_id: 2)
+
+
+
+Response.create(impact_item_id: 1, quantity: 5.0, question_id: 1, survey_id: 3, multiplier_id: 1)
+Response.create(impact_item_id: 8, quantity: 5.0, question_id: 1, survey_id: 3, multiplier_id: 1)
+Response.create(impact_item_id: 2, quantity: 3.0, question_id: 1, survey_id: 3, multiplier_id: 1)
+Response.create(impact_item_id: 6, quantity: 11.01, question_id: 1, survey_id: 3, multiplier_id: 1)
+Response.create(impact_item_id: 7, quantity: 11.01, question_id: 1, survey_id: 3, multiplier_id: 1)
+Response.create(impact_item_id: 8, quantity: 1.0, question_id: 2, survey_id: 3, multiplier_id: 1)
+Response.create(impact_item_id: 5, quantity: 3.0, question_id: 2, survey_id: 3, multiplier_id: 1)
+Response.create(impact_item_id: 11, quantity: 3.0, question_id: 2, survey_id: 3, multiplier_id: 1)
+Response.create(impact_item_id: 2, quantity: 1.0, question_id: 1, survey_id: 3, multiplier_id: 1)
+Response.create(impact_item_id: 2, quantity: 3.0, question_id: 3, survey_id: 3, multiplier_id: 1)
+Response.create(impact_item_id: 10, quantity: 2.0, question_id: 3, survey_id: 3, multiplier_id: 1)
+Response.create(impact_item_id: 9, quantity: 2.0, question_id: 3, survey_id: 3)
+Response.create(impact_item_id: 13, quantity: 1.0, question_id: 4, survey_id: 3)
+Response.create(impact_item_id: 17, quantity: 10.0, question_id: 4, survey_id: 3)
+Response.create(impact_item_id: 24, quantity: 30.0, question_id: 5, survey_id: 3)
+Response.create(impact_item_id: 20, quantity: 2.0, question_id: 6, survey_id: 3)
+Response.create(impact_item_id: 21, quantity: 5.0, question_id: 7, survey_id: 3)
+Response.create(impact_item_id: 25, quantity: 2.0, question_id: 8, survey_id: 3)
+Response.create(impact_item_id: 23, quantity: 3.0, question_id: 9, survey_id: 3)
+
+Response.create(impact_item_id: 1, quantity: 1.0, question_id: 1, survey_id: 4, multiplier_id: 1)
+Response.create(impact_item_id: 8, quantity: 1.0, question_id: 1, survey_id: 4, multiplier_id: 1)
+Response.create(impact_item_id: 2, quantity: 3.0, question_id: 1, survey_id: 4, multiplier_id: 1)
+Response.create(impact_item_id: 6, quantity: 11.01, question_id: 1, survey_id: 4, multiplier_id: 1)
+Response.create(impact_item_id: 7, quantity: 11.01, question_id: 1, survey_id: 4, multiplier_id: 1)
+Response.create(impact_item_id: 8, quantity: 1.0, question_id: 2, survey_id: 4, multiplier_id: 1)
+Response.create(impact_item_id: 5, quantity: 1.0, question_id: 2, survey_id: 4, multiplier_id: 1)
+Response.create(impact_item_id: 11, quantity: 3.0, question_id: 2, survey_id: 4, multiplier_id: 1)
+Response.create(impact_item_id: 2, quantity: 1.0, question_id: 1, survey_id: 4, multiplier_id: 1)
+Response.create(impact_item_id: 2, quantity: 3.0, question_id: 3, survey_id: 4, multiplier_id: 1)
+Response.create(impact_item_id: 10, quantity: 2.0, question_id: 3, survey_id: 4, multiplier_id: 1)
+Response.create(impact_item_id: 9, quantity: 2.0, question_id: 3, survey_id: 4)
+Response.create(impact_item_id: 13, quantity: 1.0, question_id: 4, survey_id: 4)
+Response.create(impact_item_id: 17, quantity: 10.0, question_id: 4, survey_id: 4)
+Response.create(impact_item_id: 24, quantity: 20.0, question_id: 5, survey_id: 4)
+Response.create(impact_item_id: 20, quantity: 2.0, question_id: 6, survey_id: 4)
+Response.create(impact_item_id: 21, quantity: 1.0, question_id: 7, survey_id: 4)
+Response.create(impact_item_id: 25, quantity: 2.0, question_id: 8, survey_id: 4)
+Response.create(impact_item_id: 23, quantity: 1.0, question_id: 9, survey_id: 4)
+
+Response.create(impact_item_id: 1, quantity: 3.0, question_id: 1, survey_id: 5, multiplier_id: 1)
+Response.create(impact_item_id: 8, quantity: 3.0, question_id: 1, survey_id: 5, multiplier_id: 1)
+Response.create(impact_item_id: 2, quantity: 2.0, question_id: 1, survey_id: 5, multiplier_id: 1)
+Response.create(impact_item_id: 6, quantity: 3.0, question_id: 1, survey_id: 5, multiplier_id: 1)
+Response.create(impact_item_id: 7, quantity: 11.01, question_id: 1, survey_id: 5, multiplier_id: 1)
+Response.create(impact_item_id: 8, quantity: 1.0, question_id: 2, survey_id: 5, multiplier_id: 1)
+Response.create(impact_item_id: 5, quantity: 3.0, question_id: 2, survey_id: 5, multiplier_id: 1)
+Response.create(impact_item_id: 11, quantity: 3.0, question_id: 2, survey_id: 5, multiplier_id: 1)
+Response.create(impact_item_id: 2, quantity: 1.0, question_id: 1, survey_id: 5, multiplier_id: 1)
+Response.create(impact_item_id: 2, quantity: 3.0, question_id: 3, survey_id: 5, multiplier_id: 1)
+Response.create(impact_item_id: 10, quantity: 5.0, question_id: 3, survey_id: 5, multiplier_id: 1)
+Response.create(impact_item_id: 9, quantity: 2.0, question_id: 3, survey_id: 5)
+Response.create(impact_item_id: 13, quantity: 1.0, question_id: 4, survey_id: 5)
+Response.create(impact_item_id: 17, quantity: 10.0, question_id: 4, survey_id: 5)
+Response.create(impact_item_id: 24, quantity: 30.0, question_id: 5, survey_id: 5)
+Response.create(impact_item_id: 20, quantity: 20.0, question_id: 6, survey_id: 5)
+Response.create(impact_item_id: 21, quantity: 5.0, question_id: 7, survey_id: 5)
+Response.create(impact_item_id: 25, quantity: 2.0, question_id: 8, survey_id: 5)
+Response.create(impact_item_id: 23, quantity: 3.0, question_id: 9, survey_id: 5)
+
+Response.create(impact_item_id: 1, quantity: 2.0, question_id: 1, survey_id: 6, multiplier_id: 1)
+Response.create(impact_item_id: 8, quantity: 5.0, question_id: 1, survey_id: 6, multiplier_id: 1)
+Response.create(impact_item_id: 2, quantity: 3.0, question_id: 1, survey_id: 6, multiplier_id: 1)
+Response.create(impact_item_id: 6, quantity: 0.0, question_id: 1, survey_id: 6, multiplier_id: 1)
+Response.create(impact_item_id: 7, quantity: 11.01, question_id: 1, survey_id: 6, multiplier_id: 1)
+Response.create(impact_item_id: 8, quantity: 1.0, question_id: 2, survey_id: 6, multiplier_id: 1)
+Response.create(impact_item_id: 5, quantity: 3.0, question_id: 2, survey_id: 6, multiplier_id: 1)
+Response.create(impact_item_id: 11, quantity: 4.0, question_id: 2, survey_id: 6, multiplier_id: 1)
+Response.create(impact_item_id: 2, quantity: 1.0, question_id: 1, survey_id: 6, multiplier_id: 1)
+Response.create(impact_item_id: 2, quantity: 3.0, question_id: 3, survey_id: 6, multiplier_id: 1)
+Response.create(impact_item_id: 10, quantity: 2.0, question_id: 3, survey_id: 6, multiplier_id: 1)
+Response.create(impact_item_id: 9, quantity: 2.0, question_id: 3, survey_id: 6)
+Response.create(impact_item_id: 13, quantity: 1.0, question_id: 4, survey_id: 6)
+Response.create(impact_item_id: 17, quantity: 10.0, question_id: 4, survey_id: 6)
+Response.create(impact_item_id: 24, quantity: 1.0, question_id: 5, survey_id: 6)
+Response.create(impact_item_id: 20, quantity: 2.0, question_id: 6, survey_id: 6)
+Response.create(impact_item_id: 21, quantity: 1.0, question_id: 7, survey_id: 6)
+Response.create(impact_item_id: 25, quantity: 2.0, question_id: 8, survey_id: 6)
+Response.create(impact_item_id: 23, quantity: 3.0, question_id: 9, survey_id: 6)
+
+Response.create(impact_item_id: 1, quantity: 1.0, question_id: 1, survey_id: 7, multiplier_id: 1)
+Response.create(impact_item_id: 8, quantity: 3.0, question_id: 1, survey_id: 7, multiplier_id: 1)
+Response.create(impact_item_id: 2, quantity: 3.0, question_id: 1, survey_id: 7, multiplier_id: 1)
+Response.create(impact_item_id: 6, quantity: 11.01, question_id: 1, survey_id: 7, multiplier_id: 1)
+Response.create(impact_item_id: 7, quantity: 5.0, question_id: 1, survey_id: 7, multiplier_id: 1)
+Response.create(impact_item_id: 8, quantity: 1.0, question_id: 2, survey_id: 7, multiplier_id: 1)
+Response.create(impact_item_id: 5, quantity: 3.0, question_id: 2, survey_id: 7, multiplier_id: 1)
+Response.create(impact_item_id: 11, quantity: 3.0, question_id: 2, survey_id: 7, multiplier_id: 1)
+Response.create(impact_item_id: 2, quantity: 1.0, question_id: 1, survey_id: 7, multiplier_id: 1)
+Response.create(impact_item_id: 2, quantity: 2.0, question_id: 3, survey_id: 7, multiplier_id: 1)
+Response.create(impact_item_id: 10, quantity: 2.0, question_id: 3, survey_id: 7, multiplier_id: 1)
+Response.create(impact_item_id: 9, quantity: 2.0, question_id: 3, survey_id: 7)
+Response.create(impact_item_id: 13, quantity: 1.0, question_id: 4, survey_id: 7)
+Response.create(impact_item_id: 17, quantity: 5.0, question_id: 4, survey_id: 7)
+Response.create(impact_item_id: 24, quantity: 1.0, question_id: 5, survey_id: 7)
+Response.create(impact_item_id: 20, quantity: 2.0, question_id: 6, survey_id: 7)
+Response.create(impact_item_id: 21, quantity: 5.0, question_id: 7, survey_id: 7)
+Response.create(impact_item_id: 25, quantity: 2.0, question_id: 8, survey_id: 7)
+Response.create(impact_item_id: 23, quantity: 1.0, question_id: 9, survey_id: 7)
+
+Response.create(impact_item_id: 1, quantity: 1.0, question_id: 1, survey_id: 8, multiplier_id: 1)
+Response.create(impact_item_id: 8, quantity: 2.0, question_id: 1, survey_id: 8, multiplier_id: 1)
+Response.create(impact_item_id: 2, quantity: 3.0, question_id: 1, survey_id: 8, multiplier_id: 1)
+Response.create(impact_item_id: 6, quantity: 11.01, question_id: 1, survey_id: 8, multiplier_id: 1)
+Response.create(impact_item_id: 7, quantity: 1.0, question_id: 1, survey_id: 8, multiplier_id: 1)
+Response.create(impact_item_id: 8, quantity: 1.0, question_id: 2, survey_id: 8, multiplier_id: 1)
+Response.create(impact_item_id: 5, quantity: 3.0, question_id: 2, survey_id: 8, multiplier_id: 1)
+Response.create(impact_item_id: 11, quantity: 5.0, question_id: 2, survey_id: 8, multiplier_id: 1)
+Response.create(impact_item_id: 2, quantity: 1.0, question_id: 1, survey_id: 8, multiplier_id: 1)
+Response.create(impact_item_id: 2, quantity: 3.0, question_id: 3, survey_id: 8, multiplier_id: 1)
+Response.create(impact_item_id: 10, quantity: 2.0, question_id: 3, survey_id: 8, multiplier_id: 1)
+Response.create(impact_item_id: 9, quantity: 2.0, question_id: 3, survey_id: 8)
+Response.create(impact_item_id: 13, quantity: 1.0, question_id: 4, survey_id: 8)
+Response.create(impact_item_id: 17, quantity: 1.0, question_id: 4, survey_id: 8)
+Response.create(impact_item_id: 24, quantity: 15.0, question_id: 5, survey_id: 8)
+Response.create(impact_item_id: 20, quantity: 2.0, question_id: 6, survey_id: 8)
+Response.create(impact_item_id: 21, quantity: 5.0, question_id: 7, survey_id: 8)
+Response.create(impact_item_id: 25, quantity: 2.0, question_id: 8, survey_id: 8)
+Response.create(impact_item_id: 23, quantity: 3.0, question_id: 9, survey_id: 8)
+
+Response.create(impact_item_id: 1, quantity: 2.0, question_id: 1, survey_id: 9, multiplier_id: 1)
+Response.create(impact_item_id: 8, quantity: 5.0, question_id: 1, survey_id: 9, multiplier_id: 1)
+Response.create(impact_item_id: 2, quantity: 2.0, question_id: 1, survey_id: 9, multiplier_id: 1)
+Response.create(impact_item_id: 6, quantity: 11.01, question_id: 1, survey_id: 9, multiplier_id: 1)
+Response.create(impact_item_id: 7, quantity: 11.01, question_id: 1, survey_id: 9, multiplier_id: 1)
+Response.create(impact_item_id: 8, quantity: 1.0, question_id: 2, survey_id: 9, multiplier_id: 1)
+Response.create(impact_item_id: 5, quantity: 3.0, question_id: 2, survey_id: 9, multiplier_id: 1)
+Response.create(impact_item_id: 11, quantity: 4.0, question_id: 2, survey_id: 9, multiplier_id: 1)
+Response.create(impact_item_id: 2, quantity: 1.0, question_id: 1, survey_id: 9, multiplier_id: 1)
+Response.create(impact_item_id: 2, quantity: 3.0, question_id: 3, survey_id: 9, multiplier_id: 1)
+Response.create(impact_item_id: 10, quantity: 2.0, question_id: 3, survey_id: 9, multiplier_id: 1)
+Response.create(impact_item_id: 9, quantity: 2.0, question_id: 3, survey_id: 9)
+Response.create(impact_item_id: 13, quantity: 1.0, question_id: 4, survey_id: 9)
+Response.create(impact_item_id: 17, quantity: 5.0, question_id: 4, survey_id: 9)
+Response.create(impact_item_id: 24, quantity: 10.0, question_id: 5, survey_id: 9)
+Response.create(impact_item_id: 20, quantity: 2.0, question_id: 6, survey_id: 9)
+Response.create(impact_item_id: 21, quantity: 5.0, question_id: 7, survey_id: 9)
+Response.create(impact_item_id: 25, quantity: 2.0, question_id: 8, survey_id: 9)
+Response.create(impact_item_id: 23, quantity: 3.0, question_id: 9, survey_id: 9)
+
+
+Response.create(impact_item_id: 1, quantity: 1.0, question_id: 1, survey_id: 10, multiplier_id: 1)
+Response.create(impact_item_id: 8, quantity: 5.0, question_id: 1, survey_id: 10, multiplier_id: 1)
+Response.create(impact_item_id: 2, quantity: 3.0, question_id: 1, survey_id: 10, multiplier_id: 1)
+Response.create(impact_item_id: 6, quantity: 0, question_id: 1, survey_id: 10, multiplier_id: 1)
+Response.create(impact_item_id: 7, quantity: 11.01, question_id: 1, survey_id: 10, multiplier_id: 1)
+Response.create(impact_item_id: 8, quantity: 1.0, question_id: 2, survey_id: 10, multiplier_id: 1)
+Response.create(impact_item_id: 5, quantity: 3.0, question_id: 2, survey_id: 10, multiplier_id: 1)
+Response.create(impact_item_id: 11, quantity: 3.0, question_id: 2, survey_id: 10, multiplier_id: 1)
+Response.create(impact_item_id: 2, quantity: 1.0, question_id: 1, survey_id: 10, multiplier_id: 1)
+Response.create(impact_item_id: 2, quantity: 3.0, question_id: 3, survey_id: 10, multiplier_id: 1)
+Response.create(impact_item_id: 10, quantity: 2.0, question_id: 3, survey_id: 10, multiplier_id: 1)
+Response.create(impact_item_id: 9, quantity: 2.0, question_id: 3, survey_id: 10)
+Response.create(impact_item_id: 13, quantity: 1.0, question_id: 4, survey_id: 10)
+Response.create(impact_item_id: 17, quantity: 20.0, question_id: 4, survey_id: 10)
+Response.create(impact_item_id: 24, quantity: 30.0, question_id: 5, survey_id: 10)
+Response.create(impact_item_id: 20, quantity: 2.0, question_id: 6, survey_id: 10)
+Response.create(impact_item_id: 21, quantity: 5.0, question_id: 7, survey_id: 10)
+Response.create(impact_item_id: 25, quantity: 5.0, question_id: 8, survey_id: 10)
+Response.create(impact_item_id: 23, quantity: 3.0, question_id: 9, survey_id: 10)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 food = Category.create(title: "Food")
 transportation = Category.create(title: "Transportation")
