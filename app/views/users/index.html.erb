@@ -4,7 +4,7 @@
   </div>
 </div>
 
-<div class="row">
+<div class="row" id="map-row-for-space">
   <div class="small-5 columns">
     <% @top_ten_users.each do |user| %>
     <table class="leader-table">
@@ -59,7 +59,5 @@
   <input id='lng' type='hidden' value='<%=@last_survey.longitude%>'>
 <%end%>
 
-
-<!-- <div id="map"></div> -->
 
 
