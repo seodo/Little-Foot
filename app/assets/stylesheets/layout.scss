@@ -3,7 +3,6 @@ html {
 }
 body {
   min-height: 100%;
-
 }
 
 #wrapper {
@@ -346,8 +345,25 @@ input[type="checkbox"] {
    margin-right: auto;
    max-width: initial;
 }
+#header {
+text-align: center;
+  width: 100%;
+padding: 70px 0px;
 
+  max-height: 400px;
+  background-image: url("forest-pano.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
 
+#header h1 {
+position: relative;
+bottom: 0px;
+  font-size: 150px;
+  opacity: 0.4;
+  color: #E2D9A6;
+}
 
 
 
