@@ -1,21 +1,16 @@
 <%= form_tag(users_path, method: 'post') do %>
   <div class="row register">
-    <div class="small-3 columns">
+    <div class="small-4 columns">
       <%= label_tag :full_name %><br />
       <%= text_field_tag "user[full_name]", nil, placeholder: "Full Name" %>
     </div>
 
-    <div class="small-3 columns">
-      <%= label_tag 'Upload photo' %><br />
-      <%= file_field_tag "user[image]" %>
-    </div>
-
-    <div class="small-3 columns">
+    <div class="small-4 columns">
       <%= label_tag :email %><br/>
       <%= text_field_tag 'user[email]', nil, placeholder: "email@email.com" %>
     </div>
 
-    <div class="small-3 columns">
+    <div class="small-4 columns">
       <%= label_tag :password %><br/>
       <%= password_field_tag 'user[password]', nil, placeholder: "Password" %>
     </div>
@@ -38,7 +33,9 @@
     </div>
 
     <div class="small-5 columns" id="register">
-      <%= submit_tag('Register', class: "btn") %>
+
+      <%= submit_tag('Register') %>
+
     </div>
   </div>
 

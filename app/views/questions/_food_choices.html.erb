@@ -17,11 +17,15 @@
 
 <div class="row">
   <div class="small-7 columns question-check">
-    <%=label_tag @question.content %>
-    <%= check_box_tag "dine_out" %>
-    <%= label_tag 'Did you eat out?' %>
+    <h1><%=label_tag @question.content %></h1>
+    <h6>Check here if this was a restaurant meal</h6>
+      <div class="squaredThree">
+        <input type="checkbox" value="None" id="squaredThree" name="dine_out"/>
+        <label for="squaredThree"></label>
+      </div>
   </div>
 </div>
+
 
 <div class="row food">
   <div class="small-7 columns">

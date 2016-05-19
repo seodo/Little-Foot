@@ -22,5 +22,4 @@ class ResponsesController < ApplicationController
       redirect_to survey_path(@survey)
     end
   end
-
 end
