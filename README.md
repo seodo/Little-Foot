@@ -3,16 +3,16 @@ Little Foot aims to spread awareness of carbon emissions and how the smallest of
 
 #How to Use
 Land on the Homepage
-![](http://imgur.com/75Ky3Kr)
+![homepage](http://imgur.com/75Ky3Kr)
 
 Take the Survey
-![](http://imgur.com/XQ6nVQc)
+![survey](http://imgur.com/XQ6nVQc)
 
 Your Carbon Footprint
-![](http://imgur.com/OyryO4V)
+![carbon footprint](http://imgur.com/OyryO4V)
 
 Check Out the Leaderboard
-![](http://imgur.com/qtX71my)
+![leaderboard](http://imgur.com/qtX71my)
 
 ###Contributors
 [John Seo](https://github.com/seodo), [Julia Giraldi](https://github.com/juli212), [Patrick Skelley](https://github.com/pskelley)
